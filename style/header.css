@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 919px;
+    /* background-image: url('../img/banner.png');
+    background-repeat: no-repeat;
+    background-position: right 0 bottom 0; */
+}
+
+.header__text::after {
+    content: '';
+    display: inline-block;
+    width: 675px;
+    height: 762px;
+    background-image: url('../img/banner.png');
+    position: absolute;
+    top: 207px;
+}
+
+.header__title {
+    font-weight: 900;
+    font-size: 150px;
+    line-height: 100%;
+    text-transform: uppercase;
+    letter-spacing: -0.1em;
+}
+
+.header__text {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 50px;
+    padding-left: 100px;
+}
