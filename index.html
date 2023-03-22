@@ -18,8 +18,8 @@
 </head>
 
 <body>
-    <div class="container">
-        <header class="section header">
+    <header class="section header">
+        <div class="header__container">
             <svg class="header__img visually-hidden" width="120" height="66" viewBox="0 0 120 66" fill="#"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -55,10 +55,13 @@
                     </li>
                 </ul>
             </nav>
-        </header>
-        <main>
-            <section class="advertising visually-hidden" id="listing">
-                <h1 class="section__title advertising__title">У нас есть всё для классного отдыха с друзьями!</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="section advertising visually-hidden" id="listing">
+            <div class="container">
+                <h2 class="section__title advertising__title">У нас есть всё для классного отдыха с друзьями!</h2>
                 <ul class="advertising__list">
                     <li class="advertising__item">
                         <figure class="advertising__fig">
@@ -98,9 +101,11 @@
                         </figure>
                     </li>
                 </ul>
-            </section>
+            </div>
+        </section>
 
-            <section class="section halls" id="halls">
+        <section class="section halls" id="halls">
+            <div class="container">
                 <h2 class="section__title halls__title">Наши залы</h2>
                 <ul class="halls__list">
                     <li class="halls__item halls__item_vibes">
@@ -116,20 +121,26 @@
                         <a class="halls__link" href="neon.html">Neon style</a>
                     </li>
                 </ul>
-            </section>
-            <section class="section booking">
+            </div>
+        </section>
+        <section class="section booking">
+            <div class="container">
                 <h2 class="section__title booking__title">Забронировать зал просто</h2>
                 <form action="https://jsonplaceholder.typicode.com/posts" method="post">
                     <fieldset class="field">
                         <fieldset class="fieldset fieldset-halls">
-                            <input class="radio__input" type="radio" name="halls" id="vibes" value="80's vibes">
-                            <label class="radio" for="vibes">80's vibes</label>
-                            <input class="radio__input" type="radio" name="halls" id="star" value="star wars">
-                            <label class="radio" for="star">star wars</label>
-                            <input class="radio__input" type="radio" name="halls" id="west" value="wild west">
-                            <label class="radio" for="west">wild west</label>
-                            <input class="radio__input" type="radio" name="halls" id="neon" value="neon style">
-                            <label class="radio" for="neon">neon style</label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="halls" value="80's vibes">
+                                80's vibes</label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="halls" value="star wars">
+                                star wars</label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="halls" value="wild west">
+                                wild west</label>
+                            <label class="radio">
+                                <input class="radio__input" type="radio" name="halls" value="neon style">
+                                neon style</label>
                         </fieldset>
                         <fieldset class="fieldset fieldset-set">
                             <legend>Собери набор развлечений</legend>
@@ -139,7 +150,8 @@
                                     <input type="radio" name="consoles" value="Play Station">Play Station</label>
                                 <label class="radio">
                                     <input class="radio__input" type="radio" name="consoles"
-                                        value="Sega Mega Drive">Sega Mega Drive</label>
+                                        value="Sega Mega Drive">Sega
+                                    Mega Drive</label>
                                 <label class="radio">
                                     <input class="radio__input" type="radio" name="consoles" value="X-box One S">X-box
                                     One S</label>
@@ -200,9 +212,11 @@
                         </label>
                     </fieldset>
                 </form>
-            </section>
+            </div>
+        </section>
 
-            <section class="section about" id="about">
+        <section class="section about" id="about">
+            <div class="container">
                 <h2 class="about__title">О нас</h2>
                 <div class="about__block-two-column">
                     <div class="about__block block-picture">
@@ -220,9 +234,11 @@
                         </blockquote>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="section feedback" id="feedback">
+        <section class="section feedback" id="feedback">
+            <div class="container">
                 <h2 class="section__title feedback__title">ОТЗЫВЫ ПОСЕТИТЕЛЕЙ</h2>
                 <div class="feedback__block">
                     <ul class="feedback__list">
@@ -261,9 +277,11 @@
                         </li>
                     </ul>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="section faq" id="faq">
+        <section class="section faq" id="faq">
+            <div class="container">
                 <h2 class="section__title faq__title">Частые вопросы</h2>
                 <ul class="faq__list">
                     <li class="faq__item">
@@ -287,10 +305,12 @@
                         <img class="faq__icon" src="./img/open-purple.svg" width="46">
                     </li>
                 </ul>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-        <footer class="section footer" id="contacts">
+    <footer class="section footer" id="contacts">
+        <div class="container">
             <h2 class="footer__title">Контакты</h2>
             <div class="footer__information">
                 <address class="contact">
@@ -366,8 +386,8 @@
                     </li>
                 </ul>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </body>
 
 </html>

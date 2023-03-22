@@ -96,7 +96,7 @@ address {
 .container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 96px 130px 50px 130px;
+    padding: 0 130px;
 }
 
 .section {

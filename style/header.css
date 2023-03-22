@@ -1,10 +1,16 @@
 .header {
     display: flex;
     flex-direction: column;
-    height: 919px;
+    height: 969px;
     /* background-image: url('../img/banner.png');
     background-repeat: no-repeat;
     background-position: right 0 bottom 0; */
+}
+
+.header__container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 46px 130px 0 130px;
 }
 
 .header__text::after {
