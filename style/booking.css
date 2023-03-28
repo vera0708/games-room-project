@@ -17,6 +17,63 @@
     margin-bottom: 38px;
 }
 
+.radio__input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.radio__input-circle {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 27px;
+    height: 27px;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 12px;
+}
+
+.radio__input-circle::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+}
+
+.radio__input-circle::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    transform: scale(0.4);
+    background-color: #6C0287;
+    border-radius: 50%;
+    opacity: 0;
+}
+
+.radio__input-circle:checked:after {
+    opacity: 1;
+}
+
+.checkbox__input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 25px;
+    height: 25px;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 12px;
+}
+
+.checkbox__input::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: #FFFFFF;
+}
+
 .fieldset__halls {
     display: flex;
     gap: 60px;
