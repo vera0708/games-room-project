@@ -1,21 +1,23 @@
-.halls {
-    display: flex;
-    flex-direction: column;
+.halls__container {
+    padding: 0 130px;
+
 }
 
 .halls__list {
-    padding-top: 10px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
+
 
 .halls__item {
     background-repeat: no-repeat;
     background-size: cover;
-    height: 710px;
-    width: 1180px;
+    height: 349px;
+    width: 580px;
     background-position: center;
     display: flex;
     align-items: center;
-    margin-bottom: 60px;
 }
 
 .halls__link {

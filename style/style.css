@@ -1,11 +1,14 @@
 @import "style.css";
-@import "faq.css";
+
 @import "header.css";
+@import "banner.css";
 @import "halls.css";
-@import "booking.css";
 @import "about.css";
-@import "footer.css";
+@import "advertising.css";
+@import "booking.css";
+@import "faq.css";
 @import "feedback.css";
+@import "footer.css";
 
 html {
     box-sizing: border-box;
@@ -74,6 +77,7 @@ fieldset {
     margin: 0;
     padding: 0;
     bottom: 0;
+    border: 0;
 }
 
 cite,
@@ -96,12 +100,10 @@ address {
 .container {
     max-width: 1440px;
     margin: 0 auto;
-    padding: 0 130px;
 }
 
 .section {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding: 50px 0;
 }
 
 .section__title {
@@ -110,5 +112,5 @@ address {
     line-height: 50px;
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }

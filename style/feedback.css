@@ -1,6 +1,10 @@
+.feedback__container {
+    padding: 0 130px;
+}
+
 .feedback__block {
     display: flex;
-    padding-right: 100px;
+    padding-right: 120px;
     padding-left: 100px;
     margin: 0 auto;
 }

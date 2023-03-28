@@ -1,3 +1,7 @@
+.about__container {
+    padding: 0 130px;
+}
+
 .about__title {
     font-weight: 700;
     font-size: 40px;
@@ -34,12 +38,12 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
-    padding-bottom: 36px;
+    padding-bottom: 30px;
 }
 
 .about__quote {
     margin: 0;
-    padding-top: 13px;
+    padding-top: 19px;
     font-weight: 400;
     font-size: 44px;
     line-height: 50px;

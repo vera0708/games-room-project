@@ -1,0 +1,30 @@
+.advertising__container {
+    padding: 0 130px;
+}
+
+.advertising__title {
+    padding: 0 170px;
+}
+
+.advertising__list {
+    position: relative;
+    display: flex;
+    gap: 39px 20px;
+    flex-wrap: wrap;
+}
+
+.advertising__item {
+    position: relative;
+}
+
+.advertising__name {
+    position: absolute;
+    left: 40px;
+    top: 166px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 28px;
+    flex-wrap: wrap;
+}
+
+.advertising__img {}

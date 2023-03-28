@@ -1,4 +1,115 @@
+.booking__container {
+    padding: 80px 130px;
+    background-color: #440F51;
+    color: #fff;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.fieldset__legend {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 38px;
+}
+
+.fieldset__halls {
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 60px;
+    margin-top: 2px;
+}
+
+.halls__radio {
+    background-color: #fff;
+    padding: 7px 15px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.radio__input {
+    border-color: #fff;
+}
+
+.fieldset__set {
+    display: flex;
+    padding: 0 100px;
+    gap: 100px;
+    margin-bottom: 60px;
+    margin-top: 2px;
+}
+
+.fieldset__set-option {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33%;
+}
+
+.set-option__legend {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 24px;
+}
+
+.set-option__radio,
+.set-option__checkbox {
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 25px;
+    padding-bottom: 22px;
+}
+
+.fieldset__person {
+    padding: 0 100px;
+    display: flex;
+    margin-bottom: 40px;
+    gap: 50px;
+}
+
+.person__info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 33%;
+}
+
+.person__info__label {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 6px;
+}
+
+.person__info__input {
+    width: 100%;
+}
+
+.person__info-event__input {
+    width: 50%;
+}
+
 .booking__button {
     color: black;
-    background-color: #fff;
+    background: #FFFFFF;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #6C0287;
+    padding: 16px 50px;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 100px;
 }
