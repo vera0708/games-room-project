@@ -25,7 +25,7 @@ html {
 body {
     /* max-width: 1440px; */
     min-width: 320px;
-    background-color: #1B1A1B;
+    background-color: #E5E5E5;
     color: #FFFFFF;
     margin: 0;
     min-height: 100vh;
@@ -95,6 +95,12 @@ address {
     width: 1px;
     overflow: hidden;
     transform: scale(0);
+}
+
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    background-color: #1B1A1B;
 }
 
 .container {
