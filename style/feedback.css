@@ -12,11 +12,11 @@
 .feedback__item {
     display: flex;
     position: relative;
-    padding-bottom: 50px;
+    margin-bottom: 50px;
 }
 
 .feedback__item:last-child {
-    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .feedback__figure {

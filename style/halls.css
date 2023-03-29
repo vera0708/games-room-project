@@ -1,6 +1,5 @@
 .halls__container {
     padding: 0 130px;
-
 }
 
 .halls__list {
@@ -9,15 +8,14 @@
     flex-wrap: wrap;
 }
 
-
 .halls__item {
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: flex;
+    align-items: center;
     height: 349px;
     width: 580px;
     background-position: center;
-    display: flex;
-    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .halls__link {

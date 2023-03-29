@@ -95,6 +95,21 @@
     cursor: pointer;
 }
 
+.halls__radio:hover {
+    background-color: #EADEED;
+    border: 3px solid #640AA3;
+}
+
+.halls__radio:focus {
+    background-color: #FFFFFF;
+    border: 3px solid #640AA3;
+}
+
+.halls__radio:active {
+    background-color: #6C0287;
+    border: 3px solid #FFFFFF
+}
+
 .radio__input {
     border-color: #fff;
 }
@@ -170,6 +185,11 @@
     color: #211E1E;
     background-color: #fff;
     padding: 12px 20px;
+    border: 0;
+}
+
+.person__info-input:focus {
+    border: 2px solid #CD06FF;
 }
 
 .person__info-event-text::after {
@@ -224,4 +244,18 @@
     padding: 16px 50px;
     margin-left: auto;
     margin-right: 100px;
+}
+
+.booking__button:hover {
+    background-color: #EADEED;
+    border: 3px solid #6C0287;
+}
+
+.booking__button:focus {
+    background-color: #FFFFFF;
+    border: 3px solid #6C0287;
+}
+
+.booking__button:active {
+    background-color: #EADEED;
 }

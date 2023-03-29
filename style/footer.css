@@ -13,7 +13,7 @@
     line-height: 50px;
     text-transform: uppercase;
     text-align: center;
-    padding-bottom: 54px;
+    margin-bottom: 54px;
 }
 
 .footer__information {
@@ -63,6 +63,25 @@
 
 .social__item {
     padding-right: 27px;
+}
+
+.social__link {
+    height: 50px;
+    width: 50px;
+    color: #fff;
+}
+
+.social__link:hover {
+    color: #EADEED;
+}
+
+.social__link:focus {
+    color: #EADEED;
+    border: 1px solid #CD06FF;
+}
+
+.social__link:active {
+    color: #CD06FF;
 }
 
 .copyright {

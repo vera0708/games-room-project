@@ -39,3 +39,19 @@ header {
     border-radius: 10px;
     padding: 10px 30px;
 }
+
+.navigation__button:hover {
+    background-color: #6C0287;
+    border-color: #6C0287;
+
+}
+
+.navigation__button:focus {
+    background-color: #6C0287;
+    border: none;
+}
+
+.navigation__button:active {
+    background-color: #640AA3;
+    border: 1px solid #000000;
+}

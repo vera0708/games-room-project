@@ -2,24 +2,11 @@
     padding: 0 130px;
 }
 
-.about__title {
-    font-weight: 700;
-    font-size: 40px;
-    line-height: 50px;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
 .about__block-two-column {
     display: flex;
     position: relative;
     gap: 80px;
 }
-
-/* .about__block {
-    flex-basis: 50%;
-} */
 
 .block-picture {
     width: 600px;
@@ -38,7 +25,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 28px;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .about__quote {
