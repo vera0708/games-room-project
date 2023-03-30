@@ -40,8 +40,12 @@
 
 .contact__link {
     display: flex;
-    padding-bottom: 11px;
+    margin-bottom: 14px;
     align-items: center;
+}
+
+.contact__link:last-child {
+    margin-bottom: 0;
 }
 
 .contact__icon {
@@ -54,7 +58,7 @@
 }
 
 .text-space {
-    padding-bottom: 39px;
+    margin-bottom: 39px;
 }
 
 .social {
@@ -62,7 +66,11 @@
 }
 
 .social__item {
-    padding-right: 27px;
+    margin-right: 27px;
+}
+
+.social__item:last-child {
+    margin-right: 0;
 }
 
 .social__link {

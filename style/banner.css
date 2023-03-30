@@ -4,7 +4,7 @@
     padding-right: 130px;
     display: flex;
     flex-direction: column;
-    padding-bottom: 54px;
+    padding-bottom: 154px;
     /* height: 823px; */
     /* background-image: url('../img/banner.png');
     background-repeat: no-repeat;
@@ -41,7 +41,6 @@
 .banner__info {
     display: flex;
     flex-direction: column;
-    padding-bottom: 100px;
 }
 
 .info {
@@ -125,15 +124,17 @@
 }
 
 .banner__down:hover {
+    border-radius: 50%;
     background-color: #FFFFFF;
     color: #6C0287
 }
 
 .banner__down:focus {
-    outline: 5px solid green;
+    border: 1px solid #840AA3;
 }
 
 .banner__down:active {
+    border-radius: 50%;
     background-color: #CD06FF;
     border-color: #CD06FF;
 }

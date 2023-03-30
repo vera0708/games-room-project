@@ -22,12 +22,12 @@
 .feedback__figure {
     display: flex;
     flex-direction: column;
-    padding-right: 20px;
+    margin-right: 20px;
 }
 
 .feedback__img {
     max-width: 260px;
-    padding-bottom: 11px;
+    margin-bottom: 11px;
 
 }
 
