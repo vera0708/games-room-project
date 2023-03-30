@@ -115,6 +115,7 @@
     bottom: 90px;
     width: 97px;
     height: 97px;
+    color: #FFFFFF;
     cursor: pointer;
     /* padding-left: 31px;
     color: #FFFFFF;
@@ -126,7 +127,7 @@
 .banner__down:hover {
     border-radius: 50%;
     background-color: #FFFFFF;
-    color: #6C0287
+    color: #6C0287;
 }
 
 .banner__down:focus {
