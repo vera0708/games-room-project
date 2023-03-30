@@ -88,24 +88,24 @@
     margin-top: 2px;
 }
 
-.halls__radio {
+.radio-halls {
     background-color: #fff;
     padding: 7px 15px 8px;
     border-radius: 8px;
     cursor: pointer;
 }
 
-.halls__radio:hover {
+.radio-halls:hover {
     background-color: #EADEED;
     border: 3px solid #640AA3;
 }
 
-.halls__radio:focus {
+.radio-halls:focus {
     background-color: #FFFFFF;
     border: 3px solid #640AA3;
 }
 
-.halls__radio:active {
+.radio-halls:active {
     background-color: #6C0287;
     border: 3px solid #FFFFFF
 }
@@ -114,7 +114,7 @@
     border-color: #fff;
 }
 
-.fieldset__set {
+.fieldset-set {
     display: flex;
     padding: 0 100px;
     gap: 100px;
@@ -122,61 +122,61 @@
     margin-top: 2px;
 }
 
-.fieldset__set-option {
+.fieldset-set-option {
     display: flex;
     flex-direction: column;
 }
 
-.fieldset__set-console {
+.fieldset-set-console {
     flex-basis: 32%;
 }
 
-.fieldset__set-plays,
-.fieldset__set-add {
+.fieldset-set-plays,
+.fieldset-set-add {
     flex-basis: 34%;
 }
 
-.set-option__legend {
+.fieldset-set__legend {
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     margin-bottom: 24px;
 }
 
-.set-option__radio,
-.set-option__checkbox {
+.fieldset-set__radio,
+.fieldset-set__checkbox {
     font-weight: 400;
     font-size: 22px;
     line-height: 25px;
     padding-bottom: 22px;
 }
 
-.fieldset__person {
+.fieldset-person {
     padding: 0 100px;
     display: flex;
     margin-bottom: 40px;
     gap: 50px;
 }
 
-.person__info {
+.person-info {
     display: flex;
     flex-wrap: wrap;
 }
 
-.person__info-connect {
+.person-info-connect {
     flex-basis: 34%;
 }
 
-.person__info-event {
+.person-info-event {
     flex-basis: 34%;
     margin-top: 12px;
 }
 
-.person__info-person {
+.person-info-person {
     flex-basis: 32%;
 }
 
-.person__info-input {
+.person-info__input {
     width: 100%;
     height: 52px;
     font-weight: 400;
@@ -188,11 +188,11 @@
     border: 0;
 }
 
-.person__info-input:focus {
+.person-info__input:focus {
     border: 2px solid #CD06FF;
 }
 
-.person__info-event-text::after {
+.person-info-event__text::after {
     content: '';
     display: inline-block;
     width: 21px;
@@ -204,28 +204,28 @@
     vertical-align: middle;
 }
 
-.person__info-label {
+.person-info__label {
     margin-bottom: 14px;
 }
 
-.person__info-label:last-child {
+.person-info__label:last-child {
     margin-bottom: 0;
 }
 
-.person__info-event-label {
+.person-info-event__label {
     font-weight: 700;
     font-size: 18px;
     line-height: 28px;
     color: #211E1E;
 }
 
-.person__info-data {
+.person-info-data {
     display: flex;
     gap: 32px;
     margin-bottom: 36px;
 }
 
-.person__info-text {
+.person-info__text {
     font-weight: 700;
     font-size: 14px;
     line-height: 16px;

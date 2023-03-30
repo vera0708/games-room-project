@@ -142,108 +142,108 @@
                         <fieldset class="fieldset fieldset-halls">
                             <legend class="fieldset__legend">Выбери зал</legend>
                             <div class="fieldset__halls">
-                                <label class="radio halls__radio">
+                                <label class="radio radio-halls">
                                     <input class="radio__input" type="radio" name="halls" value="80's vibes">
                                     80's vibes</label>
-                                <label class="radio halls__radio">
+                                <label class="radio radio-halls">
                                     <input class="radio__input" type="radio" name="halls" value="star wars">
                                     star wars</label>
-                                <label class="radio halls__radio">
+                                <label class="radio radio-halls">
                                     <input class="radio__input" type="radio" name="halls" value="wild west">
                                     wild west</label>
-                                <label class="radio halls__radio">
+                                <label class="radio radio-halls">
                                     <input class="radio__input" type="radio" name="halls" value="neon style">
                                     neon style</label>
                             </div>
                         </fieldset>
 
-                        <fieldset class="fieldset fieldset-set">
+                        <fieldset class="fieldset">
                             <legend class="fieldset__legend">Собери набор развлечений</legend>
-                            <div class="fieldset__set">
-                                <fieldset class="fieldset__set-option fieldset__set-console">
-                                    <legend class="set-option__legend">Приставка:</legend>
-                                    <label class="radio set-option__radio">
-                                        <input class="radio__input-circle" type="radio" name="consoles"
+                            <div class="fieldset-set">
+                                <fieldset class="fieldset-set-option" name="fieldconsole">
+                                    <legend class="fieldset-set__legend">Приставка:</legend>
+                                    <label class="radio fieldset-set__radio">
+                                        <input class="radio__input-circle" type="radio" name="console"
                                             value="Play Station">Play Station</label>
-                                    <label class="radio set-option__radio">
-                                        <input class="radio__input-circle" type="radio" name="consoles"
+                                    <label class="radio fieldset-set__radio">
+                                        <input class="radio__input-circle" type="radio" name="console"
                                             value="Sega Mega Drive">Sega Mega Drive</label>
-                                    <label class="radio set-option__radio">
-                                        <input class="radio__input-circle" type="radio" name="consoles"
+                                    <label class="radio fieldset-set__radio">
+                                        <input class="radio__input-circle" type="radio" name="console"
                                             value="X-box One S">X-box One S</label>
-                                    <label class="radio set-option__radio">
-                                        <input class="radio__input-circle" type="radio" name="consoles"
+                                    <label class="radio fieldset-set__radio">
+                                        <input class="radio__input-circle" type="radio" name="console"
                                             value="Dendy">Dendy</label>
                                 </fieldset>
 
-                                <fieldset class="fieldset__set-option fieldset__set-plays">
-                                    <legend class="set-option__legend">Настольные игры:</legend>
-                                    <label class="checkbox set-option__checkbox">
-                                        <input class="checkbox__input" type="checkbox" name="games"
+                                <fieldset class="fieldset-set-option" name="fieldgame">
+                                    <legend class="fieldset-set__legend">Настольные игры:</legend>
+                                    <label class="checkbox fieldset-set__checkbox">
+                                        <input class="checkbox__input" type="checkbox" name="game"
                                             value="Jenga">Jenga</label>
-                                    <label class="checkbox set-option__checkbox">
-                                        <input class="checkbox__input" type="checkbox" name="games"
+                                    <label class="checkbox fieldset-set__checkbox">
+                                        <input class="checkbox__input" type="checkbox" name="game"
                                             value="Monopoly">Monopoly</label>
-                                    <label class="checkbox set-option__checkbox">
-                                        <input class="checkbox__input" type="checkbox" name="games"
+                                    <label class="checkbox fieldset-set__checkbox">
+                                        <input class="checkbox__input" type="checkbox" name="game"
                                             value="Manchkin">Манчкин</label>
-                                    <label class="checkbox set-option__checkbox">
-                                        <input class="checkbox__input" type="checkbox" name="games"
+                                    <label class="checkbox fieldset-set__checkbox">
+                                        <input class="checkbox__input" type="checkbox" name="game"
                                             value="Alias">Alias</label>
                                 </fieldset>
 
-                                <fieldset class="fieldset__set-option fieldset__set-add">
-                                    <legend class="set-option__legend">Дополнительно:</legend>
-                                    <label class="checkbox set-option__checkbox">
+                                <fieldset class="fieldset-set-option" name="fieldadd">
+                                    <legend class="fieldset-set__legend">Дополнительно:</legend>
+                                    <label class="checkbox fieldset-set__checkbox">
                                         <input class="checkbox__input" type="checkbox" name="additional"
                                             value="Karaoke">Караоке</label>
-                                    <label class="checkbox set-option__checkbox">
+                                    <label class="checkbox fieldset-set__checkbox">
                                         <input class="checkbox__input" type="checkbox" name="additional" value="VR">VR
                                     </label>
                                 </fieldset>
                             </div>
                         </fieldset>
 
-                        <fieldset class="fieldset fieldset-person">
+                        <fieldset class="fieldset">
                             <legend class="fieldset__legend">Выбери дату и время</legend>
-                            <div class="fieldset__person">
-                                <div class="person__info person__info-event">
-                                    <div class="person__info-data">
-                                        <label class="person__info-event-label">
-                                            <span class="visually-hidden person__info-event-text">Дата</span>
-                                            <input class="person__info-input person__info-event-input"
+                            <div class="fieldset-person">
+                                <div class="person-info person-info-event">
+                                    <div class="person-info-data">
+                                        <label class="person-info-event__label">
+                                            <span class="visually-hidden person-info-event__text">Дата</span>
+                                            <input class="person-info__input person-info-event__input"
                                                 placeholder="Дата" name="date" required>
                                         </label>
-                                        <label class="person__info-event-label">
-                                            <span class="visually-hidden person__info-event-text">Время</span>
-                                            <input class="person__info-input person__info-event-input"
+                                        <label class="person-info-event__label">
+                                            <span class="visually-hidden person-info-event__text">Время</span>
+                                            <input class="person-info__input person-info-event__input"
                                                 placeholder="Время" name="time" required>
                                         </label>
                                     </div>
-                                    <label class="person__info-event-label">
-                                        <span class="visually-hidden person__info-event-text">Сколько человек</span>
-                                        <input class="person__info-input person__info-event-input"
+                                    <label class="person-info-event__label">
+                                        <span class="visually-hidden person-info-event__text">Сколько человек</span>
+                                        <input class="person-info__input person-info-event__input"
                                             placeholder="Сколько человек" type="number" name="peoples" required>
                                     </label>
                                 </div>
-                                <div class="person__info person__info-person">
-                                    <label class="person__info-label">
-                                        <span class="person__info-text">Имя</span>
-                                        <input class="person__info-input" type="text" name="firstName" required>
+                                <div class="person-info person-info-person">
+                                    <label class="person-info__label">
+                                        <span class="person-info__text">Имя</span>
+                                        <input class="person-info__input" type="text" name="firstName" required>
                                     </label>
-                                    <label class="person__info-label">
-                                        <span class="person__info-text">Фамилия</span>
-                                        <input class="person__info-input" type="text" name="lastName" required>
+                                    <label class="person-info__label">
+                                        <span class="person-info__text">Фамилия</span>
+                                        <input class="person-info__input" type="text" name="lastName" required>
                                     </label>
                                 </div>
-                                <div class="person__info person__info-connect">
-                                    <label class="person__info-label">
-                                        <span class="person__info-text">Телефон</span>
-                                        <input class="person__info-input" type="tel" name="telephone" required>
+                                <div class="person-info person-info-connect">
+                                    <label class="person-info__label">
+                                        <span class="person-info__text">Телефон</span>
+                                        <input class="person-info__input" type="tel" name="telephone" required>
                                     </label>
-                                    <label class="person__info-label">
-                                        <span class="person__info-text">E-mail</span>
-                                        <input class="person__info-input" type="email" name="email" required>
+                                    <label class="person-info__label">
+                                        <span class="person-info__text">E-mail</span>
+                                        <input class="person-info__input" type="email" name="email" required>
                                     </label>
                                 </div>
                         </fieldset>
