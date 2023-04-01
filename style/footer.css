@@ -106,3 +106,7 @@
     gap: 6px;
     align-items: flex-end;
 }
+
+.copyright__link-text:hover {
+    color: #CD06FF;
+}
