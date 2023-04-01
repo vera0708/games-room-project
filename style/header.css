@@ -29,6 +29,10 @@ header {
     margin-right: 0;
 }
 
+.navigation__item:hover {
+    color: #CD06FF;
+}
+
 .header__button {
     color: #fff;
     font-weight: 700;

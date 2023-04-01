@@ -11,24 +11,63 @@
 .faq__item {
     font-weight: 700;
     font-size: 24px;
-    padding: 21px 70px 20px;
     margin-bottom: 20px;
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.faq__item:nth-child(even) {
-    background-color: #440F51;
-    color: #fff;
-}
-
-.faq__item:nth-child(odd) {
-    background-color: #fff;
-    color: #1C1A1A;
+    /* display: flex;
+    align-items: center; */
 }
 
 .faq__item:last-child {
     margin-bottom: 0;
 }
+
+.faq__item .faq__btn {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    padding: 30px 70px;
+    border: 0;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: center right 70px;
+    background-size: 46px;
+    background-color: #440F51;
+    color: #fff;
+    background-image: url('../img/icons/plus-white.svg');
+}
+
+.faq__item:nth-child(even) .faq__btn {
+    background-color: #fff;
+    color: #440F51;
+    background-image: url('../img/icons/plus-purple.svg');
+}
+
+.faq__item .faq__btn:hover {
+    background-image: url('../img/icons/plus-purple-hover.svg');
+}
+
+.faq__item:nth-child(even) .faq__btn:hover {
+    background-image: url('../img/icons/plus-white-hover.svg');
+}
+
+.faq__item .faq__btn:active {
+    background-image: url('../img/icons/minus-white.svg');
+}
+
+.faq__item:nth-child(even) .faq__btn:active {
+    background-image: url('../img/icons/minus-purple.svg');
+}
+
+/* .faq__btn::after {
+    content: '';
+    width: 46px;
+    height: 46px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 70px;
+    background-image: url('../img/icons/plus-white.svg');
+    background-repeat: no-repeat;
+    background-position: center right 70px;
+    background-size: 46px;
+    color: #fff;
+} */

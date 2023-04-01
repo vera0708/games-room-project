@@ -17,6 +17,11 @@
     margin-bottom: 38px;
 }
 
+.radio,
+.checkbox {
+    position: relative;
+}
+
 .radio__input {
     appearance: none;
     -webkit-appearance: none;
@@ -80,6 +85,24 @@
     position: absolute;
     inset: 0;
     background-color: #FFFFFF;
+}
+
+.checkbox__input::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-color: transparent #CD06FF #CD06FF transparent;
+    border-width: 5px;
+    border-style: solid;
+    transform: rotate(45deg);
+    bottom: 10px;
+    left: 3px;
+    opacity: 0;
+}
+
+.checkbox__input:checked:after {
+    opacity: 1;
 }
 
 .fieldset__halls {
