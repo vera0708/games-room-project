@@ -12,8 +12,8 @@
     font-weight: 700;
     font-size: 24px;
     margin-bottom: 20px;
-    /* display: flex;
-    align-items: center; */
+    display: flex;
+    align-items: center;
 }
 
 .faq__item:last-child {

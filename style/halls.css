@@ -26,6 +26,11 @@
     margin: 0 auto;
 }
 
+.halls__link:hover {
+    transition-duration: 4s;
+    transform: rotateY(360deg);
+}
+
 .halls__item_vibes {
     background-image: url('../img/hall-vibes.jpg');
 }

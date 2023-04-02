@@ -98,14 +98,20 @@
 
 .banner__button:hover {
     background-color: #840AA3;
+    background: radial-gradient(at top left, purple, rgb(87, 4, 87), rgb(195, 14, 195), purple);
+    transition-duration: 2s;
 }
 
 .banner__button:focus {
     background-color: #840AA3;
+    transform: scaleY(0.9);
+    transition-duration: 2s;
 }
 
 .banner__button:active {
     background-color: #640AA3;
+    transform: scaleY(1.2);
+    transition-duration: 2s;
 }
 
 .banner__down {
@@ -128,14 +134,20 @@
     border-radius: 50%;
     background-color: #FFFFFF;
     color: #6C0287;
+    transform: rotate(360deg);
+    transition-duration: 3s;
 }
 
 .banner__down:focus {
     border: 1px solid #840AA3;
+    transform: scale(1.3);
+    transition-duration: 2s;
 }
 
 .banner__down:active {
     border-radius: 50%;
     background-color: #CD06FF;
     border-color: #CD06FF;
+    transform: scale(0.9);
+    transition-duration: 2s;
 }

@@ -11,6 +11,26 @@ header {
     align-items: center;
 }
 
+.header__svg:hover {
+    animation-name: anim-svg;
+    animation-duration: 3s;
+    /* transform: scale(1.5); */
+}
+
+@keyframes anim-svg {
+    20% {
+        transform: rotateY(90deg);
+    }
+
+    40% {
+        transform: rotateY(180deg);
+    }
+
+    60% {
+        transform: rotateY(270deg);
+    }
+}
+
 .navigation__list {
     display: flex;
     justify-content: space-between;
@@ -31,6 +51,8 @@ header {
 
 .navigation__item:hover {
     color: #CD06FF;
+    transition-duration: 1s;
+    transform: scale(1.3);
 }
 
 .header__button {
@@ -47,7 +69,7 @@ header {
 .header__button:hover {
     background-color: #6C0287;
     border-color: #6C0287;
-
+    transition-duration: 1s;
 }
 
 .header__button:focus {
