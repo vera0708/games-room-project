@@ -41,6 +41,7 @@
 
 .radio__input-circle:focus {
     border: 1px solid #CD06FF;
+    transition-duration: 3s;
 }
 
 .radio__input-circle::before {
@@ -78,6 +79,7 @@
 
 .checkbox__input:focus {
     border: 1px solid #CD06FF;
+    transition-duration: 2s;
 }
 
 .checkbox__input::before {
@@ -129,16 +131,19 @@
 .radio-halls:hover {
     background-color: #EADEED;
     border: 3px solid #640AA3;
+    transition-duration: 2s;
 }
 
 .radio-halls:focus {
     background-color: #FFFFFF;
     border: 3px solid #640AA3;
+    transition-duration: 2s;
 }
 
 .radio-halls:active {
     background-color: #6C0287;
-    border: 3px solid #FFFFFF
+    border: 3px solid #FFFFFF;
+    transition-duration: 2s;
 }
 
 .radio__input {
@@ -221,6 +226,7 @@
 
 .person-info__input:focus {
     border: 2px solid #CD06FF;
+    transition-duration: 2s;
 }
 
 .person-info-event__text::after {
@@ -280,13 +286,40 @@
 .booking__button:hover {
     background-color: #EADEED;
     border: 3px solid #6C0287;
+    animation-name: anim-booking-button;
+    animation-duration: 1s;
+}
+
+@keyframes anim-booking-button {
+    20% {
+        transform: scale(1.05);
+    }
+
+    40% {
+        transform: scale(1.1);
+    }
+
+    60% {
+        transform: scale(1.15);
+    }
+
+    70% {
+        transform: scale(1.1);
+    }
+
+    80% {
+        transform: scale(1.05);
+    }
 }
 
 .booking__button:focus {
     background-color: #FFFFFF;
     border: 3px solid #6C0287;
+    animation-duration: 2s;
 }
 
 .booking__button:active {
     background-color: #EADEED;
+    background: radial-gradient(at top left, #EADEED, rgb(210, 161, 210), rgb(176, 108, 176), #EADEED);
+    transition-duration: 2s;
 }

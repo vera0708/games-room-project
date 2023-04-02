@@ -48,9 +48,34 @@
     margin-bottom: 0;
 }
 
+.contact__link:hover {
+    transform: translateY(-10px);
+    transition: 2s;
+}
+
 .contact__icon {
     color: #CD06FF;
     overflow: visible;
+}
+
+.contact__icon:hover {
+    animation-name: anim-svg;
+    animation-duration: 3s;
+    /* transform: scale(1.5); */
+}
+
+@keyframes anim-svg {
+    20% {
+        transform: rotateY(90deg);
+    }
+
+    40% {
+        transform: rotateY(180deg);
+    }
+
+    60% {
+        transform: rotateY(270deg);
+    }
 }
 
 .contact__text {
@@ -69,6 +94,16 @@
     margin-right: 27px;
 }
 
+.social__item:hover {
+    transform: scale(1.2);
+    transition-duration: 1.5s;
+}
+
+.social__item:active {
+    transform: rotateX(180deg);
+    transition-duration: 1s;
+}
+
 .social__item:last-child {
     margin-right: 0;
 }
@@ -81,6 +116,7 @@
 
 .social__link:hover {
     color: #EADEED;
+
 }
 
 .social__link:focus {
@@ -109,4 +145,6 @@
 
 .copyright__link-text:hover {
     color: #CD06FF;
+    transform: translateX(-10px);
+    transition: 2s;
 }

@@ -16,6 +16,11 @@
     flex-shrink: 0;
 }
 
+.block-picture:hover {
+    transition-duration: 3s;
+    transform: scale(1.05);
+}
+
 .block-text {
     max-width: 590px;
     flex-wrap: wrap;

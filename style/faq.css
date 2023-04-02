@@ -43,18 +43,22 @@
 
 .faq__item .faq__btn:hover {
     background-image: url('../img/icons/plus-purple-hover.svg');
+    transition-duration: 1.5s;
 }
 
 .faq__item:nth-child(even) .faq__btn:hover {
     background-image: url('../img/icons/plus-white-hover.svg');
+    transition-duration: 1.5s;
 }
 
 .faq__item .faq__btn:active {
     background-image: url('../img/icons/minus-white.svg');
+    transition-duration: 2s;
 }
 
 .faq__item:nth-child(even) .faq__btn:active {
     background-image: url('../img/icons/minus-purple.svg');
+    transition-duration: 2s;
 }
 
 /* .faq__btn::after {
