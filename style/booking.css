@@ -22,10 +22,73 @@
     position: relative;
 }
 
+.fieldset__halls {
+    display: flex;
+    gap: 60px;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    margin-bottom: 60px;
+    margin-top: 2px;
+}
+
+.radio-halls {
+    background-color: #fff;
+    padding: 7px 15px 8px;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-halls:hover {
+    background-color: #EADEED;
+    border: 3px solid #640AA3;
+    transition-duration: 2s;
+}
+
+.radio-halls:focus {
+    background-color: #FFFFFF;
+    border: 3px solid #640AA3;
+    transition-duration: 2s;
+}
+
+.radio-halls:active {
+    background-color: #6C0287;
+    border: 3px solid #FFFFFF;
+    transition-duration: 2s;
+}
+
 .radio__input {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+    width: 24px;
+    height: 27px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.radio__input:after {
+    content: '';
+    position: absolute;
+    top: 8px;
+    width: 24px;
+    height: 27px;
+    background-image: url('../img/icons/triangle.svg');
+    background-repeat: no-repeat;
+    opacity: 0;
+}
+
+.radio__input:checked:after {
+    opacity: 1;
 }
 
 .radio__input-circle {
@@ -105,49 +168,6 @@
 
 .checkbox__input:checked:after {
     opacity: 1;
-}
-
-.fieldset__halls {
-    display: flex;
-    gap: 60px;
-    justify-content: space-between;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 40px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #000000;
-    margin-bottom: 60px;
-    margin-top: 2px;
-}
-
-.radio-halls {
-    background-color: #fff;
-    padding: 7px 15px 8px;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-.radio-halls:hover {
-    background-color: #EADEED;
-    border: 3px solid #640AA3;
-    transition-duration: 2s;
-}
-
-.radio-halls:focus {
-    background-color: #FFFFFF;
-    border: 3px solid #640AA3;
-    transition-duration: 2s;
-}
-
-.radio-halls:active {
-    background-color: #6C0287;
-    border: 3px solid #FFFFFF;
-    transition-duration: 2s;
-}
-
-.radio__input {
-    border-color: #fff;
 }
 
 .fieldset-set {
