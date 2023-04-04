@@ -30,8 +30,9 @@
     background-image: url('../img/adver-vr.jpg');
 }
 
-.advertising__item-sony {
-    background-image: url('../img/adver-sony.jpg');
+.advertising__item-audio {
+    background-image: url('../img/adver-audio.jpg');
+    margin-top: 70px;
 }
 
 .advertising__item-micro {
