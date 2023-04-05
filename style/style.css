@@ -10,6 +10,16 @@
 @import "feedback.css";
 @import "footer.css";
 
+:root {
+    --main-bg-color: #440F51;
+    --main-color: #FFFFFF;
+    --add-color: #6C0287;
+    --light-color: #CD06FF;
+    --lineheight: 50px;
+    --margin-num: 40px;
+    --use-text: 20px;
+}
+
 html {
     box-sizing: border-box;
     position: relative;
@@ -26,7 +36,7 @@ body {
     /* max-width: 1440px; */
     min-width: 320px;
     background-color: #1B1A1B;
-    color: #FFFFFF;
+    color: var(--main-color);
     margin: 0;
     min-height: 100vh;
     font-family: Arial, 'Open Sans', sans-serif;
@@ -109,8 +119,8 @@ address {
 .section__title {
     font-weight: 700;
     font-size: 40px;
-    line-height: 50px;
+    line-height: var(--lineheight);
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: var(--margin-num);
 }

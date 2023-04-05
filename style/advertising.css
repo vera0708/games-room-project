@@ -1,3 +1,8 @@
+.advertising {
+    padding-top: 50px;
+    padding-bottom: 120px;
+}
+
 .advertising__container {
     padding: 0 130px;
 }
@@ -32,7 +37,6 @@
 
 .advertising__item-audio {
     background-image: url('../img/adver-audio.jpg');
-    margin-top: 70px;
 }
 
 .advertising__item-micro {
@@ -51,11 +55,19 @@
     background-image: url('../img/adver-sony.jpg');
 }
 
+.advertising__item:nth-child(2) {
+    transform: translateY(70px);
+}
+
+.advertising__item:nth-child(5) {
+    transform: translateY(70px);
+}
+
 .advertising__name {
     font-weight: 700;
-    font-size: 20px;
+    font-size: var(--use-text);
     line-height: 28px;
     flex-wrap: wrap;
     margin-top: 155px;
-    margin-left: 40px;
+    margin-left: var(--margin-num);
 }
