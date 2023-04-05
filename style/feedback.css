@@ -34,7 +34,7 @@
 
 .feedback__img {
     max-width: 280px;
-    padding-bottom: 11px;
+    margin-bottom: 11px;
 }
 
 .feedback__figure::after {
