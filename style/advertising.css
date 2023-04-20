@@ -11,7 +11,6 @@
     grid-template-rows: repeat(2, 1fr);
     gap: 39px 20px;
     margin-bottom: 70px;
-    /* flex-wrap: wrap; */
 }
 
 .advertising__item {
