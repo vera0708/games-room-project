@@ -172,6 +172,10 @@ address {
         --use-text: 16px;
     }
 
+    .container {
+        max-width: 768px;
+    }
+
     .section {
         padding: 30px 0;
     }
@@ -181,11 +185,23 @@ address {
     }
 }
 
+@media(max-width: 630px) {
+    .section__title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+}
+
 @media(max-width: 480px) {
     .container {
         max-width: 480px;
         padding-left: 20px;
         padding-right: 20px;
+    }
+
+    .section__title {
+        font-size: 16px;
+        line-height: 20px;
     }
 }
 

@@ -149,12 +149,16 @@
     transition: 2s;
 }
 
+@media(max-width: 1366px) {}
+
 @media(max-width: 1024px) {}
+
+@media(max-width: 920px) {}
 
 @media(max-width: 768px) {}
 
-/* @media(max-width: 480px) {
+@media(max-width: 630px) {}
 
-} */
+@media(max-width: 480px) {}
 
 @media(max-width: 320px) {}
