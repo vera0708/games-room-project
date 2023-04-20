@@ -24,6 +24,7 @@ html {
     box-sizing: border-box;
     position: relative;
     background-color: #E5E5E5;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -48,7 +49,7 @@ img,
 svg {
     display: block;
     max-width: 100%;
-    max-height: 100%;
+    /* max-height: 100%; */
     height: auto;
 }
 
@@ -67,6 +68,7 @@ input {
 a {
     text-decoration: none;
     color: inherit;
+    transition: 3s;
 }
 
 ul {
@@ -109,6 +111,8 @@ address {
 
 .container {
     max-width: 1440px;
+    padding-left: 130px;
+    padding-right: 130px;
     margin: 0 auto;
 }
 
@@ -123,4 +127,84 @@ address {
     text-transform: uppercase;
     text-align: center;
     margin-bottom: var(--margin-num);
+}
+
+@media(max-width: 1366px) {
+    .container {
+        max-width: 1366px;
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+}
+
+@media(max-width: 1024px) {
+    :root {
+        --lineheight: 40px;
+        --margin-num: 26px;
+        --use-text: 18px;
+    }
+
+    .container {
+        max-width: 1024px;
+    }
+
+    .section {
+        padding: 35px 0;
+    }
+
+    .section__title {
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 920px) {
+    .container {
+        max-width: 920px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+@media(max-width: 768px) {
+    :root {
+        --lineheight: 36px;
+        --margin-num: 30px;
+        --use-text: 16px;
+    }
+
+    .section {
+        padding: 30px 0;
+    }
+
+    .section__title {
+        font-size: 24px;
+    }
+}
+
+@media(max-width: 480px) {
+    .container {
+        max-width: 480px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media(max-width: 320px) {
+    :root {
+        --lineheight: 18px;
+        --margin-num: 15px;
+        --use-text: 12px;
+    }
+
+    .container {
+        max-width: 320px;
+    }
+
+    .section {
+        padding: 15px 0;
+    }
+
+    .section__title {
+        font-size: 14px;
+    }
 }

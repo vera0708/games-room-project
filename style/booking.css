@@ -343,3 +343,13 @@
     background: radial-gradient(at top left, #EADEED, rgb(210, 161, 210), rgb(176, 108, 176), #EADEED);
     transition-duration: 2s;
 }
+
+@media(max-width: 1024px) {}
+
+@media(max-width: 768px) {}
+
+/* @media(max-width: 480px) {
+
+} */
+
+@media(max-width: 320px) {}
