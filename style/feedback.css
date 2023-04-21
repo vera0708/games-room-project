@@ -93,7 +93,7 @@
 @media(max-width: 920px) {
     .feedback__list {
         padding-left: 63px;
-        padding-right: 64px;
+        padding-right: 44px;
     }
 
     .feedback__figure {
@@ -149,30 +149,32 @@
         align-items: center;
     }
 
+    .feedback__img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .feedback__figure {
+        padding-right: 0;
+        padding-bottom: 16px;
+    }
+
     .feedback__figure::after {
-        left: calc(50% - 86px);
+        left: calc(50% - 76px);
     }
 }
 
 @media(max-width: 480px) {
-    .feedback__item {
-        padding-bottom: 20px;
-    }
-
     .feedback__img {
         max-width: 86px;
         margin-bottom: 9px;
-    }
-
-    .feedback__figure {
-        padding-bottom: 16px;
     }
 
     .feedback__figure::after {
         width: 86px;
         height: 86px;
         border-radius: 43px;
-        left: calc(50% - 62px);
+        left: calc(50% - 43px);
     }
 
     .feedback__description {
