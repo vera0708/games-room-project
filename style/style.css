@@ -193,6 +193,11 @@ address {
 }
 
 @media(max-width: 480px) {
+    :root {
+        --lineheight: 18px;
+        --margin-num: 15px;
+    }
+
     .container {
         max-width: 480px;
         padding-left: 20px;
@@ -212,7 +217,6 @@ address {
 @media(max-width: 320px) {
     :root {
         --lineheight: 18px;
-        --margin-num: 15px;
         --use-text: 12px;
     }
 
