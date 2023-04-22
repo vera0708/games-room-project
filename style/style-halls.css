@@ -1,0 +1,87 @@
+@import "style.css";
+
+.back__container {
+    margin-top: 40px;
+
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 28px;
+}
+
+.back__link {
+    display: flex;
+    padding: 20px 40px;
+    background-image: url('../img/halls-img/Arrow-back.svg');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: left;
+}
+
+.hall__banner {
+    display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 750px;
+    margin-bottom: 50px;
+}
+
+.hall__banner-80-vibes {
+    background-image: url('../img/halls-img/hall-80-vibes.png');
+}
+
+.hall__description {
+    max-width: 1000px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.hall__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+    min-height: 229px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+    text-transform: uppercase;
+
+}
+
+.hall__item {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hall__item_wars {
+    background-image: url(../img/hall-wars.jpg);
+}
+
+.hall__item_west {
+    background-image: url(../img/hall-west.png);
+}
+
+.hall__item_neon {
+    background-image: url(../img/hall-neon.jpg);
+}
+
+.hall__item_vibes {
+    background-image: url(../img/hall-vibes.jpg);
+}
