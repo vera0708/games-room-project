@@ -1,23 +1,28 @@
-.about__block-two-column {
-    display: flex;
+.about__block {
+    display: grid;
+    grid-template-areas:
+        "picture description"
+        "picture quote";
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: 1fr 1.464fr;
     position: relative;
-    gap: 80px;
+    gap: 48px 80px;
 }
 
-.block-picture {
-    flex-basis: 54%;
+.about__block-picture {
+    grid-area: picture;
     background-image: url('../img/about_photos.jpg');
     background-repeat: no-repeat;
     background-size: contain;
 }
 
-.block-picture:hover {
+.about__block-picture:hover {
     transition-duration: 3s;
     transform: scale(1.05);
 }
 
-.block-text {
-    flex-basis: 43%;
+.about__block-text {
+    grid-area: description;
 }
 
 .about__description {
@@ -27,7 +32,12 @@
     margin-bottom: 30px;
 }
 
-.about__quote {
+.about__description:last-child {
+    margin-bottom: 0;
+}
+
+.about__block-quote {
+    grid-area: quote;
     margin: 0;
     padding-top: 19px;
     font-weight: 400;
@@ -51,8 +61,8 @@
 
 .about__quote-text2 {
     margin-left: var(--margin-num);
-    margin-bottom: 39px;
-    max-width: 380px;
+    margin-bottom: 31px;
+    max-width: 420px;
 }
 
 .about__quote-text2::after {
@@ -88,33 +98,24 @@
 }
 
 @media(max-width: 1366px) {
-    .about__block-two-column {
-        gap: 39.54px;
+    .about__block {
+        grid-template-columns: 0.95fr 1fr;
+        grid-template-rows: 1fr 1.113fr;
+        gap: 26px 39.54px;
     }
 
-    .block-picture {
-        flex-basis: 51%;
-    }
-
-    .block-text {
-        flex-basis: 48%;
-    }
-
-    .about__description {
-        line-height: 24px;
-        margin-bottom: 30px;
-    }
-
-    .about__quote {
+    .about__block-quote {
         padding-top: 7px;
         font-size: 30px;
         line-height: 36px;
     }
 
-    .about__quote-text1::before {
-        font-size: 30px;
-        line-height: 36px;
-        padding-right: 10px;
+    .about__quote-text1 {
+        position: absolute;
+        background-size: 16px;
+        top: 0px;
+        height: 36px;
+        width: 16px;
     }
 
     .about__quote-text2 {
@@ -139,14 +140,160 @@
     }
 }
 
-@media(max-width: 1024px) {}
+@media(max-width: 1024px) {
+    .about__description {
+        font-size: var(--use-text);
+        line-height: 24px;
+        margin-bottom: 28px;
+    }
 
-@media(max-width: 920px) {}
+    .about__block-quote {
+        padding-top: 0;
+    }
 
-@media(max-width: 768px) {}
+    .about__quote-text2 {
+        max-width: 400px;
+    }
+}
 
-@media(max-width: 630px) {}
+@media(max-width: 920px) {
+    .about__block {
+        grid-template-areas:
+            "picture description"
+            "quote quote";
+        grid-template-columns: 1.374fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        gap: 30px 28px;
+    }
 
-@media(max-width: 480px) {}
+    .about__quote-text2 {
+        max-width: 740px;
+    }
+
+
+    .about__quote-profile {
+        align-items: end;
+    }
+}
+
+@media(max-width: 768px) {
+    .about__block {
+        grid-template-areas:
+            "picture description"
+            "quote quote";
+        grid-template-columns: 1.374fr 1fr;
+        grid-template-rows: 2fr 1fr;
+        gap: 30px 28px;
+    }
+
+    .about__block-picture {
+        min-height: 280px;
+    }
+
+    .about__block-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about__description {
+        font-size: var(--use-text);
+        line-height: 22px;
+        margin-bottom: 24px;
+    }
+
+    .about__quote-text1 {
+        background-size: 16px;
+        height: 30px;
+        width: 16px;
+    }
+
+    .about__quote-text2 {
+        margin-left: 21px;
+        margin-bottom: 16px;
+        max-width: 590px;
+    }
+
+    .about__quote-text2::after {
+        padding-left: 5px;
+    }
+
+    .about__quote-profile {
+        align-items: end;
+    }
+
+    .about__quote-author {
+        padding-left: 95px;
+        margin-left: 0px;
+    }
+}
+
+@media(max-width: 630px) {
+    .about__description {
+        font-size: 12px;
+        line-height: 16px;
+        margin-bottom: 26px;
+    }
+
+    .about__block-quote {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .about__quote-text1 {
+        background-size: 10px;
+        height: 30px;
+        width: 10px;
+    }
+
+    .about__quote-text2 {
+        margin-top: 7px;
+        margin-left: 13px;
+        margin-bottom: 9px;
+        /* max-width: 590px; */
+    }
+
+    .about__quote-text2::after {
+        font-size: 18px;
+        line-height: 26px;
+        padding-left: 3px;
+    }
+
+    .about__quote-author {
+        max-width: 230px;
+        padding-left: 67px;
+        font-size: 12px;
+        line-height: 16px;
+        background-size: 56px;
+        min-height: 56px;
+    }
+}
+
+@media(max-width: 480px) {
+    .about__block {
+        grid-template-areas:
+            "description"
+            "picture"
+            "quote";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+        gap: 15px;
+    }
+
+    .about__block-picture {
+        display: flex;
+        background-position: center;
+    }
+
+    .about__quote-text2 {
+        margin-left: 15px;
+        margin-bottom: 6px;
+        /* max-width: 280px; */
+    }
+
+    .about__quote-profile {
+        align-items: start;
+    }
+}
 
 @media(max-width: 320px) {}
