@@ -1,9 +1,5 @@
 @import "style.css";
 
-.hall__container {
-    padding-bottom: 44px;
-}
-
 .back__container {
     margin-top: 40px;
     font-weight: 700;
@@ -49,6 +45,18 @@
     background-image: url('../img/halls-img/hall-80-vibes.png');
 }
 
+.hall__banner-star-wars {
+    background-image: url('../img/halls-img/hall-star-wars.png');
+}
+
+.hall__banner-wild-west {
+    background-image: url('../img/halls-img/hall-wild-west.png');
+}
+
+.hall__banner-neon-style {
+    background-image: url('../img/halls-img/hall-neon-style.png');
+}
+
 .hall__description {
     max-width: 1000px;
     font-weight: 700;
@@ -78,6 +86,18 @@
 
 .about-hall__picture-vibes {
     background-image: url('../img/hall-vibes.jpg');
+}
+
+.about-hall__picture-wars {
+    background-image: url('../img/hall-wars.jpg');
+}
+
+.about-hall__picture-west {
+    background-image: url('../img/hall-west.png');
+}
+
+.about-hall__picture-neon {
+    background-image: url('../img/hall-neon.jpg');
 }
 
 .about-hall__text {
@@ -146,6 +166,11 @@
     background-image: url(../img/hall-vibes.jpg);
 }
 
+.footer__hall {
+    padding-top: 72px;
+    padding-bottom: 44px;
+}
+
 @media(max-width: 1366px) {
     .hall__banner {
         max-width: 1366px;
@@ -157,10 +182,6 @@
 }
 
 @media(max-width: 1024px) {
-    .hall__container {
-        padding-bottom: 19px;
-    }
-
     .back__container {
         margin-top: 30px;
     }
@@ -185,6 +206,11 @@
         min-height: 172px;
         line-height: 36px;
     }
+
+    .footer__hall {
+        padding-top: 47px;
+        padding-bottom: 19px;
+    }
 }
 
 @media(max-width: 920px) {
@@ -194,10 +220,6 @@
 }
 
 @media(max-width: 768px) {
-    .hall__container {
-        padding-bottom: 18px;
-    }
-
     .back__container {
         margin-top: 20px;
         font-size: 16px;
@@ -226,10 +248,6 @@
         min-height: 326px;
     }
 
-    /* .about-hall__picture-vibes {
-            background-image: url('../img/hall-vibes.jpg');
-        } */
-
     .about-hall__description {
         margin-bottom: 16px;
     }
@@ -243,6 +261,11 @@
 
     .hall__link {
         max-width: 100px;
+    }
+
+    .footer__hall {
+        padding-top: 40px;
+        padding-bottom: 18px;
     }
 }
 
@@ -312,7 +335,8 @@
         min-height: 440px;
     }
 
-    .hall__container {
+    .footer__hall {
+        padding-top: 22px;
         padding-bottom: 24px;
     }
 }
