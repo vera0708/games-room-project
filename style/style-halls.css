@@ -1,8 +1,11 @@
 @import "style.css";
 
+.hall__container {
+    padding-bottom: 44px;
+}
+
 .back__container {
     margin-top: 40px;
-
     font-weight: 700;
     font-size: 22px;
     line-height: 28px;
@@ -15,6 +18,13 @@
     background-repeat: no-repeat;
     background-size: 30px;
     background-position: left;
+}
+
+.back__link:hover {
+    color: var(--light-color);
+    font-weight: 500;
+    transition-duration: 1s;
+    transform: scale(1.1);
 }
 
 .hall__banner {
@@ -47,6 +57,46 @@
     text-align: center;
 }
 
+.about-hall {
+    display: grid;
+    grid-template-areas:
+        "picture description";
+    grid-template-columns: 1fr 0.83fr;
+    grid-template-rows: 1fr;
+    position: relative;
+    gap: 80px;
+}
+
+.about-hall__picture {
+    grid-area: picture;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 424px;
+}
+
+.about-hall__picture-vibes {
+    background-image: url('../img/hall-vibes.jpg');
+}
+
+.about-hall__text {
+    font-weight: 400;
+    font-size: var(--use-text);
+    line-height: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-hall__description {
+    margin-bottom: 20px;
+}
+
+.about-hall__description:last-child {
+    margin-bottom: 0;
+}
+
 .hall__list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -57,7 +107,6 @@
     font-size: 30px;
     line-height: 1.2;
     text-transform: uppercase;
-
 }
 
 .hall__item {
@@ -68,6 +117,17 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    cursor: pointer;
+}
+
+.hall__item:hover {
+    transition-duration: 1s;
+    transform: scale(1.05);
+    color: var(--light-color);
+}
+
+.hall__link {
+    max-width: 170px;
 }
 
 .hall__item_wars {
@@ -84,4 +144,190 @@
 
 .hall__item_vibes {
     background-image: url(../img/hall-vibes.jpg);
+}
+
+@media(max-width: 1366px) {
+    .hall__banner {
+        max-width: 1366px;
+    }
+
+    .about-hall {
+        gap: 50px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .hall__container {
+        padding-bottom: 19px;
+    }
+
+    .back__container {
+        margin-top: 30px;
+    }
+
+    .hall__banner {
+        max-width: 1024px;
+        min-height: 534px;
+        margin-bottom: 35px;
+    }
+
+    .hall__description {
+        max-width: 800px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .about-hall {
+        gap: 30px;
+    }
+
+    .hall__list {
+        min-height: 172px;
+        line-height: 36px;
+    }
+}
+
+@media(max-width: 920px) {
+    .hall__banner {
+        max-width: 920px;
+    }
+}
+
+@media(max-width: 768px) {
+    .hall__container {
+        padding-bottom: 18px;
+    }
+
+    .back__container {
+        margin-top: 20px;
+        font-size: 16px;
+    }
+
+    .hall__banner {
+        max-width: 768px;
+        font-size: 60px;
+        line-height: 72px;
+        min-height: 402px;
+        margin-bottom: 30px;
+    }
+
+    .hall__description {
+        max-width: 688px;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .about-hall {
+        grid-template-columns: 1fr 0.95fr;
+        gap: 46px;
+    }
+
+    .about-hall__picture {
+        min-height: 326px;
+    }
+
+    /* .about-hall__picture-vibes {
+            background-image: url('../img/hall-vibes.jpg');
+        } */
+
+    .about-hall__description {
+        margin-bottom: 16px;
+    }
+
+    .hall__list {
+        gap: 8px;
+        min-height: 134px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .hall__link {
+        max-width: 100px;
+    }
+}
+
+@media(max-width: 630px) {
+    .hall__banner {
+        max-width: 630px;
+    }
+
+    .about-hall {
+        grid-template-areas:
+            "picture"
+            "description";
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr;
+        gap: 15px;
+    }
+
+    .hall__list {
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        min-height: 540px;
+    }
+}
+
+@media(max-width: 480px) {
+    .back__container {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .back__link {
+        padding: 20px 20px;
+        background-size: 16px;
+    }
+
+    .hall__banner {
+        max-width: 480px;
+        font-size: 30px;
+        line-height: 36px;
+        min-height: 168px;
+        margin-bottom: 15px;
+    }
+
+    .hall__description {
+        max-width: 420px;
+    }
+
+    .about-hall__picture {
+        min-height: 180px;
+    }
+
+    /* .about-hall__picture-vibes {
+        background-image: url('../img/hall-vibes.jpg');
+    } */
+
+    .about-hall__text {
+        font-size: 12px;
+        line-height: 16px;
+        align-items: start;
+    }
+
+    .about-hall__description {
+        margin-bottom: 10px;
+    }
+
+    .hall__list {
+        min-height: 440px;
+    }
+
+    .hall__container {
+        padding-bottom: 24px;
+    }
+}
+
+@media(max-width: 320px) {
+    .hall__banner {
+        max-width: 320px;
+    }
+
+    .hall__description {
+        max-width: 280px;
+    }
+
+    .hall__list {
+        gap: 5px;
+        min-height: 340px;
+    }
 }
