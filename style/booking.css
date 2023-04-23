@@ -106,27 +106,31 @@
 .fieldset-set {
     display: grid;
     padding: 0 100px;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "set-console set-plays set-add";
     gap: 100px;
     margin-bottom: 60px;
     margin-top: 2px;
 }
 
-.fieldset-set-option {
+.fieldset-set-console,
+.fieldset-set-plays,
+.fieldset-set-add {
     display: flex;
     flex-direction: column;
 }
 
-/* 
 .fieldset-set-console {
-    flex-basis: 32%;
+    grid-area: set-console;
 }
 
-.fieldset-set-plays,
+.fieldset-set-plays {
+    grid-area: set-plays;
+}
+
 .fieldset-set-add {
-    flex-basis: 34%;
-} */
+    grid-area: set-add;
+}
 
 .fieldset-set__legend {
     margin-bottom: 24px;
@@ -389,7 +393,6 @@
     .radio-halls {
         padding-top: 10px;
         padding-bottom: 10px;
-        padding-right: 20px;
         border: 2px solid transparent;
         border-radius: 6px;
         min-width: 180px;
@@ -414,75 +417,8 @@
         margin-bottom: 60px;
     }
 
-    .fieldset-person {
-        padding: 0 100px;
-        display: flex;
-        margin-bottom: var(--margin-num);
-        gap: 50px;
-    }
 
-    .person-info {
-        display: flex;
-        flex-wrap: wrap;
-    }
 
-    .person-info-connect {
-        flex-basis: 34%;
-    }
-
-    .person-info-event {
-        flex-basis: 34%;
-        margin-top: 12px;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 28px;
-        color: #211E1E;
-    }
-
-    .person-info-person {
-        flex-basis: 32%;
-    }
-
-    .person-info__input {
-        width: 100%;
-        height: 52px;
-        font-size: 18px;
-        line-height: 28px;
-        color: #211E1E;
-        padding: 12px 20px;
-        border: 0;
-    }
-
-    .person-info-event__text::after {
-        content: '';
-        position: absolute;
-        display: inline-block;
-        width: 21px;
-        height: 15px;
-        background-image: url('../img/icons/triangle.svg');
-        background-repeat: no-repeat;
-        background-size: 21px;
-        background-position: right;
-        vertical-align: middle;
-    }
-
-    .person-info__label {
-        margin-bottom: 14px;
-        position: relative;
-    }
-
-    .person-info-data {
-        display: flex;
-        gap: 32px;
-        margin-bottom: 36px;
-    }
-
-    .person-info__text {
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 16px;
-        margin-bottom: 6px;
-    }
 
     .booking__button {
         display: inline-block;
@@ -514,13 +450,28 @@
     .radio-halls {
         padding-top: 9px;
         padding-bottom: 9px;
+        padding-right: 15px;
         border: 1px solid transparent;
-        min-width: 110px;
+        min-width: 150px;
+    }
+
+    .field-set {
+        justify-content: start;
     }
 
     .fieldset-set {
+        grid-template-areas:
+            "set-console set-plays"
+            "set-add .";
+        gap: 32px 66px;
         margin-bottom: 53px;
     }
+
+    .radio__input {
+        width: 20px;
+        height: 25px;
+    }
+
 
     .radio__input-circle {
         width: 40px;
