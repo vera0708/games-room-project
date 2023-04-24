@@ -224,10 +224,24 @@
 }
 
 .fieldset-person {
+    display: grid;
     padding: 0 100px;
-    display: flex;
-    margin-bottom: var(--margin-num);
+    grid-template-areas:
+        "event person connect";
     gap: 50px;
+    margin-bottom: 60px;
+}
+
+.person-info-event {
+    grid-area: event;
+}
+
+.person-info-person {
+    grid-area: person;
+}
+
+.person-info-connect {
+    grid-area: connect;
 }
 
 .person-info {
@@ -235,21 +249,12 @@
     flex-wrap: wrap;
 }
 
-.person-info-connect {
-    flex-basis: 34%;
-}
-
 .person-info-event {
-    flex-basis: 34%;
     margin-top: 12px;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
     color: #211E1E;
-}
-
-.person-info-person {
-    flex-basis: 32%;
 }
 
 .person-info__input {
@@ -372,6 +377,11 @@
         margin-top: 0;
         gap: 67px;
     }
+
+    .fieldset-person {
+        padding: 0;
+        margin-bottom: 50px;
+    }
 }
 
 @media(max-width: 1024px) {
@@ -393,9 +403,10 @@
     .radio-halls {
         padding-top: 10px;
         padding-bottom: 10px;
+        padding-right: 5px;
         border: 2px solid transparent;
         border-radius: 6px;
-        min-width: 180px;
+        max-width: 180px;
         text-align: center;
     }
 
@@ -432,14 +443,7 @@
     }
 }
 
-@media(max-width: 920px) {}
-
-@media(max-width: 768px) {
-    .booking__container {
-        padding-top: 50px;
-        padding-bottom: 50px;
-    }
-
+@media(max-width: 920px) {
     .fieldset__halls {
         gap: 29px;
         font-size: 16px;
@@ -452,11 +456,7 @@
         padding-bottom: 9px;
         padding-right: 15px;
         border: 1px solid transparent;
-        min-width: 150px;
-    }
-
-    .field-set {
-        justify-content: start;
+        max-width: 150px;
     }
 
     .fieldset-set {
@@ -467,11 +467,43 @@
         margin-bottom: 53px;
     }
 
+    .fieldset-person {
+        grid-template-areas:
+            "event event"
+            "person connect";
+        gap: 42px 106px;
+        margin-bottom: 48px;
+    }
+}
+
+@media(max-width: 768px) {
+    .booking__container {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    /* .fieldset__halls {
+        gap: 29px;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 50px;
+    }
+
+    .radio-halls {
+        padding-top: 9px;
+        padding-bottom: 9px;
+        padding-right: 15px;
+        border: 1px solid transparent;
+        min-width: 150px;
+    } */
     .radio__input {
         width: 20px;
         height: 25px;
     }
 
+    .field-set {
+        justify-content: start;
+    }
 
     .radio__input-circle {
         width: 40px;
@@ -505,13 +537,67 @@
     }
 }
 
-@media(max-width: 630px) {}
+@media(max-width: 630px) {
+    .fieldset__halls {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .fieldset-set {
+        grid-template-areas:
+            "set-console"
+            "set-plays"
+            "set-add";
+        gap: 32px;
+        margin-bottom: 53px;
+    }
+
+    .fieldset-person {
+        grid-template-areas:
+            "event"
+            "person"
+            "connect";
+        gap: 35px;
+        margin-bottom: 40px;
+    }
+}
 
 @media(max-width: 480px) {
     .booking__container {
         padding-top: 30px;
         padding-bottom: 30px;
     }
+
+    .fieldset__legend {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 20px;
+    }
+
+    .fieldset__halls {
+        gap: 20px 14px;
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 30px;
+    }
+
+    .fieldset-set {
+        gap: 25px;
+        margin-bottom: 30px;
+    }
+
+    .radio__input-circle,
+    .checkbox__input {
+        width: 30px;
+        height: 30px;
+    }
+
+    .fieldset-person {
+        margin-bottom: 35px;
+    }
+}
+
+@media(max-width: 320px) {
 
     .fieldset__legend,
     .fieldset-set__legend {
@@ -520,16 +606,11 @@
         margin-bottom: 15px;
     }
 
-    .fieldset__halls {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 20px 14px;
-        font-size: 14px;
+    .fieldset-set__radio,
+    .fieldset-set__checkbox {
+        font-size: 16px;
         line-height: 18px;
-        margin-bottom: 30px;
+        padding-bottom: 15px;
     }
 
 }
-
-@media(max-width: 320px) {}
