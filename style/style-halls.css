@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @import "style.css";
 
 .back__container {
@@ -8,6 +15,8 @@
 }
 
 .back__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding: 20px 40px;
     background-image: url('../img/halls-img/Arrow-back.svg');
@@ -19,15 +28,25 @@
 .back__link:hover {
     color: var(--light-color);
     font-weight: 500;
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
     transition-duration: 1s;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
     transform: scale(1.1);
 }
 
 .hall__banner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     max-width: 1440px;
     margin: 0 auto;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     font-weight: 700;
     font-size: 90px;
@@ -66,17 +85,24 @@
 }
 
 .about-hall {
+    display: -ms-grid;
     display: grid;
     grid-template-areas:
         "picture description";
+    -ms-grid-columns: 1fr 80px 0.83fr;
     grid-template-columns: 1fr 0.83fr;
+    -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
     position: relative;
     gap: 80px;
 }
 
 .about-hall__picture {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: picture;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     background-position: center;
     background-repeat: no-repeat;
@@ -104,8 +130,15 @@
     font-weight: 400;
     font-size: var(--use-text);
     line-height: 28px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -118,8 +151,11 @@
 }
 
 .hall__list {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
     gap: 20px;
     min-height: 229px;
@@ -129,10 +165,31 @@
     text-transform: uppercase;
 }
 
+.hall__list>*:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+.hall__list>*:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+
+.hall__list>*:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+}
+
 .hall__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     background-position: center;
     background-repeat: no-repeat;
@@ -141,7 +198,11 @@
 }
 
 .hall__item:hover {
+    -webkit-transition-duration: 1s;
+    -o-transition-duration: 1s;
     transition-duration: 1s;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
     color: var(--light-color);
 }
@@ -240,6 +301,7 @@
     }
 
     .about-hall {
+        -ms-grid-columns: 1fr 46px 0.95fr;
         grid-template-columns: 1fr 0.95fr;
         gap: 46px;
     }
@@ -278,15 +340,39 @@
         grid-template-areas:
             "picture"
             "description";
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+        -ms-grid-rows: 2fr 15px 1fr;
         grid-template-rows: 2fr 1fr;
         gap: 15px;
     }
 
     .hall__list {
+        -ms-grid-rows: 1fr 20px 1fr 20px 1fr;
         grid-template-rows: repeat(3, 1fr);
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         min-height: 540px;
+    }
+
+    .hall__list>*:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .hall__list>*:nth-child(2) {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+    }
+
+    .hall__list>*:nth-child(3) {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .about-hall__picture {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
     }
 }
 
@@ -320,6 +406,8 @@
     .about-hall__text {
         font-size: 12px;
         line-height: 16px;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: start;
     }
 

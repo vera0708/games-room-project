@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .booking__container {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -6,12 +13,21 @@
 }
 
 .field {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 .fieldset {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
@@ -33,8 +49,11 @@
 }
 
 .fieldset__halls {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 60px 1fr 60px 1fr 60px 1fr;
     grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: 1fr;
     grid-template-rows: 1fr;
     gap: 60px;
     font-weight: 700;
@@ -47,6 +66,26 @@
     margin-top: 2px;
 }
 
+.fieldset__halls>*:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+}
+
+.fieldset__halls>*:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+}
+
+.fieldset__halls>*:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
+}
+
+.fieldset__halls>*:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 7;
+}
+
 .radio-halls {
     background-color: var(--main-color);
     padding-top: 7px;
@@ -55,26 +94,38 @@
     border: 3px solid transparent;
     border-radius: 8px;
     cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
 }
 
 .radio-halls:hover {
     background-color: #EADEED;
     border: 3px solid #640AA3;
+    -webkit-transition-duration: 2s;
+    -o-transition-duration: 2s;
     transition-duration: 2s;
 }
 
 .radio-halls:focus {
     background-color: var(--main-color);
     border: 3px solid #640AA3;
+    -webkit-transition-duration: 2s;
+    -o-transition-duration: 2s;
     transition-duration: 2s;
 }
 
 .radio-halls:active {
     background-color: var(--add-color);
     border: 3px solid var(--main-color);
+    -webkit-transition-duration: 2s;
+    -o-transition-duration: 2s;
     transition-duration: 2s;
 }
 
@@ -104,6 +155,7 @@
 }
 
 .fieldset-set {
+    display: -ms-grid;
     display: grid;
     padding: 0 100px;
     grid-template-areas:
@@ -116,19 +168,30 @@
 .fieldset-set-console,
 .fieldset-set-plays,
 .fieldset-set-add {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 .fieldset-set-console {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: set-console;
 }
 
 .fieldset-set-plays {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
     grid-area: set-plays;
 }
 
 .fieldset-set-add {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
     grid-area: set-add;
 }
 
@@ -157,6 +220,8 @@
 
 .radio__input-circle:focus {
     border: 1px solid var(--light-color);
+    -webkit-transition-duration: 3s;
+    -o-transition-duration: 3s;
     transition-duration: 3s;
 }
 
@@ -172,6 +237,8 @@
     content: '';
     position: absolute;
     inset: 0;
+    -webkit-transform: scale(0.4);
+    -ms-transform: scale(0.4);
     transform: scale(0.4);
     background-color: var(--add-color);
     border-radius: 50%;
@@ -195,6 +262,8 @@
 
 .checkbox__input:focus {
     border: 1px solid var(--light-color);
+    -webkit-transition-duration: 2s;
+    -o-transition-duration: 2s;
     transition-duration: 2s;
 }
 
@@ -213,6 +282,8 @@
     border-color: transparent var(--light-color) var(--light-color) transparent;
     border-width: 5px;
     border-style: solid;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     bottom: 10px;
     left: 3px;
@@ -224,25 +295,34 @@
 }
 
 .fieldset-person {
+    display: -ms-grid;
     display: grid;
     padding: 0 100px;
     grid-template-areas:
         "event person connect";
+    -ms-grid-columns: 1fr 50px 0.93fr 50px 1fr;
     grid-template-columns: 1fr 0.93fr 1fr;
     gap: 50px;
     margin-bottom: 60px;
 }
 
 .person-info-person {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
     grid-area: person;
 }
 
 .person-info-connect {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
     grid-area: connect;
 }
 
 .person-info-event {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: event;
+    display: -ms-grid;
     display: grid;
     grid-template-areas:
         "data"
@@ -256,20 +336,32 @@
 }
 
 .person-info-data {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: data;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 32px;
     margin-top: 6px;
 }
 
 .person-info-number {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
     grid-area: number;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
 }
 
 .person-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -304,6 +396,8 @@
 
 .person-info__input:focus {
     border: 2px solid var(--light-color);
+    -webkit-transition-duration: 2s;
+    -o-transition-duration: 2s;
     transition-duration: 2s;
 }
 
@@ -340,28 +434,62 @@
 .booking__button:hover {
     background-color: #EADEED;
     border: 3px solid var(--add-color);
+    -webkit-animation-name: anim-booking-button;
     animation-name: anim-booking-button;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
 }
 
-@keyframes anim-booking-button {
+@-webkit-keyframes anim-booking-button {
     20% {
+        -webkit-transform: scale(1.05);
         transform: scale(1.05);
     }
 
     40% {
+        -webkit-transform: scale(1.1);
         transform: scale(1.1);
     }
 
     60% {
+        -webkit-transform: scale(1.15);
         transform: scale(1.15);
     }
 
     70% {
+        -webkit-transform: scale(1.1);
         transform: scale(1.1);
     }
 
     80% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+}
+
+@keyframes anim-booking-button {
+    20% {
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
+    }
+
+    40% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    60% {
+        -webkit-transform: scale(1.15);
+        transform: scale(1.15);
+    }
+
+    70% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+
+    80% {
+        -webkit-transform: scale(1.05);
         transform: scale(1.05);
     }
 }
@@ -369,12 +497,16 @@
 .booking__button:focus {
     background-color: var(--main-color);
     border: 3px solid var(--add-color);
+    -webkit-animation-duration: 2s;
     animation-duration: 2s;
 }
 
 .booking__button:active {
     background-color: #EADEED;
+    background: -o-radial-gradient(at top left, #EADEED, rgb(210, 161, 210), rgb(176, 108, 176), #EADEED);
     background: radial-gradient(at top left, #EADEED, rgb(210, 161, 210), rgb(176, 108, 176), #EADEED);
+    -webkit-transition-duration: 2s;
+    -o-transition-duration: 2s;
     transition-duration: 2s;
 }
 
@@ -394,6 +526,7 @@
 
     .fieldset-person {
         padding: 0;
+        -ms-grid-columns: 1.18fr 1fr 1fr;
         grid-template-columns: 1.18fr 1fr 1fr;
         margin-bottom: 50px;
     }
@@ -485,7 +618,9 @@
         grid-template-areas:
             "event event"
             "person connect";
+        -ms-grid-columns: 1fr 106px 1fr;
         grid-template-columns: 1fr 1fr;
+        -ms-grid-rows: 1fr 42px 2.7fr;
         grid-template-rows: 1fr 2.7fr;
         gap: 42px 106px;
         margin-bottom: 48px;
@@ -494,6 +629,7 @@
     .person-info-event {
         grid-template-areas:
             "data  number";
+        -ms-grid-columns: 1fr 106px 1fr;
         grid-template-columns: 1fr 1fr;
         margin-top: 0;
         gap: 106px;
@@ -512,6 +648,47 @@
         font-size: 22px;
         line-height: 28px;
     }
+
+    .fieldset-set-console {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .fieldset-set-plays {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+    }
+
+    .fieldset-set-add {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .person-info-person {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .person-info-connect {
+        -ms-grid-row: 3;
+        -ms-grid-column: 3;
+    }
+
+    .person-info-event {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
+    }
+
+    .person-info-data {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .person-info-number {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+    }
 }
 
 @media(max-width: 768px) {
@@ -526,6 +703,8 @@
     }
 
     .field-set {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: start;
     }
 
@@ -554,6 +733,8 @@
         height: 20px;
         border-width: 5px;
         border-style: solid;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
         transform: rotate(45deg);
         bottom: 10px;
         left: 3px;
@@ -563,8 +744,30 @@
 
 @media(max-width: 630px) {
     .fieldset__halls {
+        -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
+        -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+    }
+
+    .fieldset__halls>*:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .fieldset__halls>*:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 2;
+    }
+
+    .fieldset__halls>*:nth-child(3) {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+    }
+
+    .fieldset__halls>*:nth-child(4) {
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;
     }
 
     .fieldset-set {
@@ -581,16 +784,20 @@
             "event"
             "person"
             "connect";
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+        -ms-grid-rows: 0.9fr 35px 1fr 35px 1fr;
         grid-template-rows: 0.9fr 1fr 1fr;
         gap: 35px;
         margin-bottom: 40px;
     }
 
     .person-info-event {
+        -ms-grid-rows: auto 15px auto;
         grid-template-areas:
             "data"
             "number";
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         margin-top: 10px;
         gap: 15px;
@@ -598,6 +805,47 @@
 
     .booking__button {
         min-width: 280px;
+    }
+
+    .fieldset-set-console {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .fieldset-set-plays {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .fieldset-set-add {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+    }
+
+    .person-info-person {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .person-info-connect {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+    }
+
+    .person-info-event {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
+    }
+
+    .person-info-data {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .person-info-number {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
     }
 }
 
@@ -660,5 +908,4 @@
         line-height: 18px;
         padding-bottom: 15px;
     }
-
 }

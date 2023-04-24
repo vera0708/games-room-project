@@ -1,15 +1,28 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .about__block {
+    display: -ms-grid;
     display: grid;
     grid-template-areas:
         "picture description"
         "picture quote";
+    -ms-grid-columns: 1.2fr 80px 1fr;
     grid-template-columns: 1.2fr 1fr;
+    -ms-grid-rows: 1fr 48px 1.464fr;
     grid-template-rows: 1fr 1.464fr;
     position: relative;
     gap: 48px 80px;
 }
 
 .about__block-picture {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
     grid-area: picture;
     background-image: url('../img/about_photos.jpg');
     background-repeat: no-repeat;
@@ -17,11 +30,17 @@
 }
 
 .about__block-picture:hover {
+    -webkit-transition-duration: 3s;
+    -o-transition-duration: 3s;
     transition-duration: 3s;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
     transform: scale(1.05);
 }
 
 .about__block-text {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
     grid-area: description;
 }
 
@@ -37,6 +56,8 @@
 }
 
 .about__block-quote {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
     grid-area: quote;
     margin: 0;
     padding-top: 19px;
@@ -76,12 +97,21 @@
 }
 
 .about__quote-profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 }
 
 .about__quote-author {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     max-width: 355px;
     padding-left: 110px;
@@ -99,9 +129,31 @@
 
 @media(max-width: 1366px) {
     .about__block {
+        -ms-grid-columns: 0.95fr 39.54px 1fr;
         grid-template-columns: 0.95fr 1fr;
+        -ms-grid-rows: 1fr 26px 1.113fr;
         grid-template-rows: 1fr 1.113fr;
         gap: 26px 39.54px;
+    }
+
+    .about__block>*:nth-child(1) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .about__block>*:nth-child(2) {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+    }
+
+    .about__block>*:nth-child(3) {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+
+    .about__block>*:nth-child(4) {
+        -ms-grid-row: 3;
+        -ms-grid-column: 3;
     }
 
     .about__block-quote {
@@ -161,7 +213,9 @@
         grid-template-areas:
             "picture description"
             "quote quote";
+        -ms-grid-columns: 1.374fr 28px 1fr;
         grid-template-columns: 1.374fr 1fr;
+        -ms-grid-rows: 2fr 30px 1fr;
         grid-template-rows: 2fr 1fr;
         gap: 30px 28px;
     }
@@ -172,7 +226,26 @@
 
 
     .about__quote-profile {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
         align-items: end;
+    }
+
+    .about__block-picture {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+        -ms-grid-column: 1;
+    }
+
+    .about__block-text {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+    }
+
+    .about__block-quote {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
     }
 }
 
@@ -181,7 +254,9 @@
         grid-template-areas:
             "picture description"
             "quote quote";
+        -ms-grid-columns: 1.374fr 28px 1fr;
         grid-template-columns: 1.374fr 1fr;
+        -ms-grid-rows: 2fr 30px 1fr;
         grid-template-rows: 2fr 1fr;
         gap: 30px 28px;
     }
@@ -191,8 +266,15 @@
     }
 
     .about__block-text {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 
@@ -219,12 +301,31 @@
     }
 
     .about__quote-profile {
+        -webkit-box-align: end;
+        -ms-flex-align: end;
         align-items: end;
     }
 
     .about__quote-author {
         padding-left: 95px;
         margin-left: 0px;
+    }
+
+    .about__block-picture {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 1;
+        -ms-grid-column: 1;
+    }
+
+    .about__block-text {
+        -ms-grid-row: 1;
+        -ms-grid-column: 3;
+    }
+
+    .about__block-quote {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
     }
 }
 
@@ -275,12 +376,16 @@
             "description"
             "picture"
             "quote";
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+        -ms-grid-rows: 1fr 15px 2fr 15px 1fr;
         grid-template-rows: 1fr 2fr 1fr;
         gap: 15px;
     }
 
     .about__block-picture {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         background-position: center;
     }
@@ -292,7 +397,26 @@
     }
 
     .about__quote-profile {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
         align-items: start;
+    }
+
+    .about__block-picture {
+        -ms-grid-row: 3;
+        -ms-grid-row-span: 1;
+        -ms-grid-column: 1;
+    }
+
+    .about__block-text {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+
+    .about__block-quote {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 1;
     }
 }
 
