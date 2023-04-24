@@ -227,7 +227,7 @@
                         <fieldset class="fieldset field-person">
                             <legend class="fieldset__legend">Выбери дату и время</legend>
                             <div class="fieldset-person">
-                                <div class="person-info person-info-event">
+                                <div class="person-info-event">
                                     <div class="person-info-data">
                                         <label class="person-info-event__label">
                                             <span class="visually-hidden person-info-event__text">Дата</span>
@@ -240,11 +240,13 @@
                                                 placeholder="Время" name="time" required>
                                         </label>
                                     </div>
-                                    <label class="person-info-event__label">
-                                        <span class="visually-hidden person-info-event__text">Сколько человек</span>
-                                        <input class="person-info__input person-info-event__input"
-                                            placeholder="Сколько человек" type="number" name="peoples" required>
-                                    </label>
+                                    <div class="person-info-number">
+                                        <label class="person-info__label">
+                                            <span class="visually-hidden person-info-event__text">Сколько человек</span>
+                                            <input class="person-info__input person-info-event__input"
+                                                placeholder="Сколько человек" type="number" name="peoples" required>
+                                        </label>
+                                    </div>
                                 </div>
                                 <div class="person-info person-info-person">
                                     <label class="person-info__label">

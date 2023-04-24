@@ -228,12 +228,9 @@
     padding: 0 100px;
     grid-template-areas:
         "event person connect";
+    grid-template-columns: 1fr 0.93fr 1fr;
     gap: 50px;
     margin-bottom: 60px;
-}
-
-.person-info-event {
-    grid-area: event;
 }
 
 .person-info-person {
@@ -244,17 +241,53 @@
     grid-area: connect;
 }
 
-.person-info {
-    display: flex;
-    flex-wrap: wrap;
-}
-
 .person-info-event {
+    grid-area: event;
+    display: grid;
+    grid-template-areas:
+        "data"
+        "number";
     margin-top: 12px;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
     color: #211E1E;
+    gap: 36px;
+}
+
+.person-info-data {
+    grid-area: data;
+    display: flex;
+    gap: 32px;
+    margin-top: 6px;
+}
+
+.person-info-number {
+    grid-area: number;
+    display: flex;
+    flex-basis: 100%;
+}
+
+.person-info {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.person-info__label {
+    margin-bottom: 14px;
+    position: relative;
+    width: 100%;
+}
+
+.person-info__label:last-child {
+    margin-bottom: 0;
+}
+
+.person-info__text {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 6px;
 }
 
 .person-info__input {
@@ -287,38 +320,19 @@
     vertical-align: middle;
 }
 
-.person-info__label {
-    margin-bottom: 14px;
-    position: relative;
-}
-
-.person-info__label:last-child {
-    margin-bottom: 0;
-}
-
-.person-info-data {
-    display: flex;
-    gap: 32px;
-    margin-bottom: 36px;
-}
-
-.person-info__text {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    margin-bottom: 6px;
-}
-
 .booking__button {
     display: inline-block;
     background: var(--main-color);
     border-radius: 10px;
+    min-width: 300px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     font-weight: 700;
     font-size: 22px;
     line-height: 28px;
     text-transform: uppercase;
     color: var(--add-color);
-    padding: 16px 50px;
+    /* padding: 16px 50px; */
     margin-left: auto;
     margin-right: 100px;
 }
@@ -380,7 +394,12 @@
 
     .fieldset-person {
         padding: 0;
+        grid-template-columns: 1.18fr 1fr 1fr;
         margin-bottom: 50px;
+    }
+
+    .booking__button {
+        margin-right: 30px;
     }
 }
 
@@ -428,18 +447,13 @@
         margin-bottom: 60px;
     }
 
-
-
-
     .booking__button {
-        display: inline-block;
-        border-radius: 10px;
-        font-weight: 700;
-        font-size: 22px;
-        line-height: 28px;
-        padding: 16px 50px;
-        margin-left: auto;
-        margin-right: 100px;
+        min-width: 254px;
+        padding-top: 13px;
+        padding-bottom: 13px;
+        font-size: 18px;
+        line-height: 24px;
+        margin-right: 0px;
     }
 }
 
@@ -471,8 +485,32 @@
         grid-template-areas:
             "event event"
             "person connect";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2.7fr;
         gap: 42px 106px;
         margin-bottom: 48px;
+    }
+
+    .person-info-event {
+        grid-template-areas:
+            "data  number";
+        grid-template-columns: 1fr 1fr;
+        margin-top: 0;
+        gap: 106px;
+    }
+
+    .person-info-data {
+        gap: 14px;
+        margin-top: 0;
+    }
+
+    .booking__button {
+        min-width: 300px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 28px;
     }
 }
 
@@ -482,20 +520,6 @@
         padding-bottom: 50px;
     }
 
-    /* .fieldset__halls {
-        gap: 29px;
-        font-size: 16px;
-        line-height: 20px;
-        margin-bottom: 50px;
-    }
-
-    .radio-halls {
-        padding-top: 9px;
-        padding-bottom: 9px;
-        padding-right: 15px;
-        border: 1px solid transparent;
-        min-width: 150px;
-    } */
     .radio__input {
         width: 20px;
         height: 25px;
@@ -557,8 +581,23 @@
             "event"
             "person"
             "connect";
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.9fr 1fr 1fr;
         gap: 35px;
         margin-bottom: 40px;
+    }
+
+    .person-info-event {
+        grid-template-areas:
+            "data"
+            "number";
+        grid-template-columns: 1fr;
+        margin-top: 10px;
+        gap: 15px;
+    }
+
+    .booking__button {
+        min-width: 280px;
     }
 }
 
@@ -594,6 +633,15 @@
 
     .fieldset-person {
         margin-bottom: 35px;
+    }
+
+    .booking__button {
+        width: 100%;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
     }
 }
 
