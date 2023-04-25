@@ -65,9 +65,9 @@
 }
 
 .advertising__item:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-transform: scale(1.04);
+    -ms-transform: scale(1.04);
+    transform: scale(1.04);
     -webkit-transition-duration: 1.5s;
     -o-transition-duration: 1.5s;
     transition-duration: 1.5s;
@@ -97,16 +97,21 @@
     background-image: url('../img/adver-sony.jpg');
 }
 
-.advertising__item:nth-child(2) {
+.advertising__item:nth-child(2),
+.advertising__item:nth-child(5) {
     -webkit-transform: translateY(70px);
     -ms-transform: translateY(70px);
     transform: translateY(70px);
 }
 
-.advertising__item:nth-child(5) {
-    -webkit-transform: translateY(70px);
-    -ms-transform: translateY(70px);
-    transform: translateY(70px);
+.advertising__item:nth-child(2):hover,
+.advertising__item:nth-child(5):hover {
+    -webkit-transform: scale(1.04) translateY(70px);
+    -ms-transform: scale(1.04) translateY(70px);
+    transform: scale(1.04) translateY(70px);
+    -webkit-transition-duration: 1.5s;
+    -o-transition-duration: 1.5s;
+    transition-duration: 1.5s;
 }
 
 .advertising__name {
@@ -121,6 +126,8 @@
 
 @media(max-width: 1366px) {
     .advertising__list {
+        -ms-grid-columns: 1fr 202px 1fr 22px 1fr;
+        -ms-grid-rows: 1fr 30px 1fr;
         gap: 30px 22px;
     }
 }
@@ -141,16 +148,19 @@
         margin-left: 20px;
     }
 
-    .advertising__item:nth-child(2) {
+
+    .advertising__item:nth-child(2),
+    .advertising__item:nth-child(5) {
         -webkit-transform: translateY(53px);
         -ms-transform: translateY(53px);
         transform: translateY(53px);
     }
 
-    .advertising__item:nth-child(5) {
-        -webkit-transform: translateY(53px);
-        -ms-transform: translateY(53px);
-        transform: translateY(53px);
+    .advertising__item:nth-child(2):hover,
+    .advertising__item:nth-child(5):hover {
+        -webkit-transform: scale(1.04) translateY(53px);
+        -ms-transform: scale(1.04) translateY(53px);
+        transform: scale(1.04) translateY(53px);
     }
 }
 
@@ -201,16 +211,18 @@
         -ms-grid-column: 3;
     }
 
-    .advertising__item:nth-child(2) {
+    .advertising__item:nth-child(2),
+    .advertising__item:nth-child(5) {
         -webkit-transform: translateY(0px);
         -ms-transform: translateY(0px);
         transform: translateY(0px);
     }
 
-    .advertising__item:nth-child(5) {
-        -webkit-transform: translateY(0px);
-        -ms-transform: translateY(0px);
-        transform: translateY(0px);
+    .advertising__item:nth-child(2):hover,
+    .advertising__item:nth-child(5):hover {
+        -webkit-transform: scale(1.04) translateY(0px);
+        -ms-transform: scale(1.04) translateY(0px);
+        transform: scale(1.04) translateY(0px);
     }
 
     .advertising__item-vr {
