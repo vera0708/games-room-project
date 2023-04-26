@@ -433,7 +433,7 @@
 
 .booking__button:hover {
     background-color: #EADEED;
-    border: 3px solid var(--add-color);
+    /* border: 3px solid var(--add-color); */
     -webkit-animation-name: anim-booking-button;
     animation-name: anim-booking-button;
     -webkit-animation-duration: 1s;
@@ -443,53 +443,27 @@
 @-webkit-keyframes anim-booking-button {
     20% {
         -webkit-transform: scale(1.05);
-        transform: scale(1.05);
-    }
-
-    40% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
     }
 
     60% {
-        -webkit-transform: scale(1.15);
-        transform: scale(1.15);
-    }
-
-    70% {
         -webkit-transform: scale(1.1);
-        transform: scale(1.1);
     }
 
     80% {
         -webkit-transform: scale(1.05);
-        transform: scale(1.05);
     }
 }
 
 @keyframes anim-booking-button {
     20% {
-        -webkit-transform: scale(1.05);
         transform: scale(1.05);
     }
 
-    40% {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
-    }
-
     60% {
-        -webkit-transform: scale(1.15);
-        transform: scale(1.15);
-    }
-
-    70% {
-        -webkit-transform: scale(1.1);
         transform: scale(1.1);
     }
 
     80% {
-        -webkit-transform: scale(1.05);
         transform: scale(1.05);
     }
 }

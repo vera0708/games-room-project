@@ -13,8 +13,7 @@
     -ms-grid-rows: 1fr 20px 1fr;
     grid-template-rows: repeat(2, 1fr);
     gap: 20px;
-    min-height: 814px;
-    /* flex-wrap: wrap; */
+    min-height: 718px;
 }
 
 .halls__list>*:nth-child(1) {
@@ -48,6 +47,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    /* max-height: 349px; */
 }
 
 .halls__link {
@@ -67,11 +67,11 @@
 }
 
 .halls__item_vibes {
-    background-image: url('../img/hall-vibes.jpg');
+    background-image: url('../img/hall-vibes.png');
 }
 
 .halls__item_wars {
-    background-image: url('../img/hall-wars.jpg');
+    background-image: url('../img/hall-wars.png');
 }
 
 .halls__item_west {
@@ -79,7 +79,7 @@
 }
 
 .halls__item_neon {
-    background-image: url('../img/hall-neon.jpg');
+    background-image: url('../img/hall-neon.png');
     margin-bottom: 0;
 }
 
@@ -92,7 +92,7 @@
 
 @media(max-width: 1024px) {
     .halls__list {
-        min-height: 814px;
+        min-height: 553px;
     }
 }
 
@@ -105,7 +105,8 @@
 
 @media(max-width: 768px) {
     .halls__list {
-        min-height: 552px;
+        gap: 18px;
+        min-height: 418px;
     }
 }
 

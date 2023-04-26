@@ -61,14 +61,14 @@
     margin-bottom: 0;
 }
 
-.contact__link:hover {
+/* .contact__link:hover {
     -webkit-transform: translateY(-10px);
     -ms-transform: translateY(-10px);
     transform: translateY(-10px);
     -webkit-transition: 2s;
     -o-transition: 2s;
     transition: 2s;
-}
+} */
 
 .contact__icon {
     color: var(--light-color);
