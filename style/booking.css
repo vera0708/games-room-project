@@ -250,13 +250,13 @@
 }
 
 .checkbox__input {
+    position: relative;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     width: 25px;
     height: 25px;
     vertical-align: middle;
-    position: relative;
     margin-right: 12px;
 }
 
