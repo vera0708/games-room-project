@@ -1,6 +1,7 @@
+const modalControl = () => {
+    const btnOpenForm = document.querySelector('.header__button');
+    const overlay = document.querySelector('.modal-overlay');
 
-
-export const modalControl = (btnOpenForm, overlay) => {
     const openModal = () => {
         overlay.classList.add('is-visible');
     }
@@ -30,17 +31,18 @@ export const modalControl = (btnOpenForm, overlay) => {
         closeModal,
     }
 };
+const { closeModal } = modalControl();
 
-export const formControl = (form, list, closeModal) => {
+const formControl = (closeModal) => {
+    const form = document.querySelector('.modal__form');
+
     form.addEventListener('submit', e => {
         e.preventDefault();
-        // Передаем данные из формы:
         const formData = new FormData(e.target);
-        const newContact = Object.fromEntries(formData);
-        addContactPage(newContact, list);
-        addContactData(newContact);
-        // Очищаем форму для следующего заполненияЖ
+        const newCall = Object.fromEntries(formData);
+        console.log(newCall);
         form.reset();
         closeModal();
     })
 };
+formControl(closeModal);
