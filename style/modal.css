@@ -24,7 +24,7 @@
 .modal {
     position: relative;
     margin: auto;
-    flex-basis: 600px;
+    max-width: 600px;
     padding: 60px 150px;
     background-color: #440F51;
     color: #FFF;
@@ -103,4 +103,50 @@
 
 .modal__close:hover {
     opacity: 0.7;
+}
+
+@media(max-width: 480px) {
+    .modal {
+        max-width: 440px;
+        padding: 60px 20px;
+    }
+
+    .modal__form {
+        margin-bottom: 30px;
+    }
+
+    .modal__title {
+        font-size: 20px;
+    }
+
+    .form__label {
+        margin-bottom: 50px;
+    }
+
+    .form__input {
+        line-height: 42px;
+    }
+
+    .form__button {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        font-size: 18px;
+        min-width: 260px;
+    }
+
+    .modal__close {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 320px) {
+    .modal {
+        max-width: 280px;
+    }
+
+    .form__button {
+        min-width: 240px;
+    }
 }

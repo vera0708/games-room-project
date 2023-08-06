@@ -19,6 +19,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: column;
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
@@ -78,6 +79,33 @@
     -webkit-transition-duration: 2s;
     -o-transition-duration: 2s;
     transition-duration: 2s;
+}
+
+.faq__text-wrapper {
+    height: 0;
+    overflow: hidden;
+    transition: height .4s ease-in-out;
+    background-color: #fff;
+    padding: 0 70px;
+}
+
+.faq__text {
+    color: #000;
+    font-family: Arial;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    padding-top: 57px;
+    padding-bottom: 43px;
+}
+
+.faq__text-span {
+    font-weight: 700;
+}
+
+.faq__item_active .faq__text-wrapper {
+    height: auto;
 }
 
 /* .faq__btn::after {
