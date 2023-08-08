@@ -67,14 +67,14 @@
     transition-duration: 1.5s;
 }
 
-.faq__item .faq__btn:active {
+.faq__item_active .faq__btn {
     background-image: url('../img/icons/minus-white.svg');
     -webkit-transition-duration: 2s;
     -o-transition-duration: 2s;
     transition-duration: 2s;
 }
 
-.faq__item:nth-child(even) .faq__btn:active {
+.faq__item_active:nth-child(even) .faq__btn {
     background-image: url('../img/icons/minus-purple.svg');
     -webkit-transition-duration: 2s;
     -o-transition-duration: 2s;
