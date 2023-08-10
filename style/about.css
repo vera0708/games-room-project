@@ -370,7 +370,7 @@
     }
 }
 
-@media(max-width: 480px) {
+@media(max-width: 530px) {
     .about__block {
         grid-template-areas:
             "description"
@@ -419,5 +419,3 @@
         -ms-grid-column-span: 1;
     }
 }
-
-@media(max-width: 320px) {}

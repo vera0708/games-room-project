@@ -272,7 +272,7 @@
     }
 }
 
-@media(max-width: 480px) {
+@media(max-width: 530px) {
     .advertising__title {
         max-width: 280px;
     }

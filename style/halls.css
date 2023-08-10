@@ -117,7 +117,7 @@
     }
 }
 
-@media(max-width: 480px) {
+@media(max-width: 530px) {
     .halls__list {
         -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;

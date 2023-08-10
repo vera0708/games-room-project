@@ -425,7 +425,7 @@
     }
 }
 
-@media(max-width: 480px) {
+@media(max-width: 530px) {
     .banner__title {
         font-size: 44px;
         margin-bottom: 6px;
