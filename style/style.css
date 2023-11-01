@@ -35,12 +35,11 @@ html {
 }
 
 body {
-    /* max-width: 1440px; */
     min-width: 320px;
+    min-height: 100vh;
     background-color: #1B1A1B;
     color: var(--main-color);
     margin: 0;
-    min-height: 100vh;
     font-family: Arial, 'Open Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -115,10 +114,15 @@ address {
     transform: scale(0);
 }
 
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 .container {
     max-width: 1440px;
-    padding-left: 130px;
-    padding-right: 130px;
+    padding: 0 130px;
     margin: 0 auto;
 }
 

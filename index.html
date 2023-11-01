@@ -15,6 +15,12 @@
     <title>Проект игрового пространства</title>
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style.css">
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d6a3a29c-aeb8-4681-ad38-32679d0ddc6b&lang=ru_RU"
+        type="text/javascript">    </script>
+    <script defer src="script/just-validate.production.min.js"></script>
+    <script defer src="script/inputmask.min.js"></script>
+    <script defer src="script/script.js"></script>
     <script src="script/modal.js" defer></script>
     <script src="script/burger.js" defer></script>
     <script src="script/accordion.js" defer></script>
@@ -471,8 +477,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer__information-map">
-                    <img src="./img/map.jpg" alt="Карта данного района города" width="680" height="274">
+                <div class="footer__information-map" id="map" style="width: 680px; height: 274px">
                 </div>
             </div>
             <div class="copyright">

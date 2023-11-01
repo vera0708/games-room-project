@@ -5,9 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#5f1e83">
     <title>Зал "Звёздные войны"</title>
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style-halls.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=d6a3a29c-aeb8-4681-ad38-32679d0ddc6b&lang=ru_RU"
+        type="text/javascript">    </script>
+    <script defer src="script/just-validate.production.min.js"></script>
+    <script defer src="script/inputmask.min.js"></script>
+    <script defer src="script/script.js"></script>
+    <script defer src="script/swiper.js"></script>
 </head>
 
 <body>
@@ -86,20 +102,50 @@
             </div>
         </section>
 
-        <section class="section hall" id="hall">
+        <section class="section hall slider" id="hall">
             <div class="container hall__container">
                 <h2 class="section__title hall__title">Другие комнаты</h2>
-                <ul class="hall__list">
-                    <li class="hall__item hall__item_vibes">
-                        <a class="hall__link" href="hall-80-vibes.html" target="_blank">80's vibes</a>
-                    </li>
-                    <li class="hall__item hall__item_west">
-                        <a class="hall__link" href="hall-wild-west.html" target="_blank">Wild west</a>
-                    </li>
-                    <li class="hall__item hall__item_neon">
-                        <a class="hall__link" href="hall-neon-style.html" target="_blank">Neon style</a>
-                    </li>
-                </ul>
+                <div class="swiper">
+                    <div class="hall__list swiper-wrapper">
+                        <div class="hall__item hall__item_vibes swiper-slide">
+                            <a class="hall__link" href="hall-80-vibes.html" target="_blank">
+                                <img class="hall__link-img" src="/img/hall-vibes.png" alt="">
+                                80's vibes
+                            </a>
+                        </div>
+                        <div class="hall__item hall__item_west swiper-slide">
+                            <a class="hall__link" href="hall-wild-west.html" target="_blank">
+                                <img class="hall__link-img" src="/img/hall-west.png" alt="">
+                                Wild west
+                            </a>
+                        </div>
+                        <div class="hall__item hall__item_neon swiper-slide">
+                            <a class="hall__link" href="hall-neon-style.html" target="_blank">
+                                <img class="hall__link-img" src="/img/hall-neon.png" alt="">
+                                Neon style
+                            </a>
+                        </div>
+                        <div class="hall__item hall__item_vibes swiper-slide">
+                            <a class="hall__link" href="hall-80-vibes.html" target="_blank">
+                                <img class="hall__link-img" src="/img/hall-vibes.png" alt="">
+                                80's vibes
+                            </a>
+                        </div>
+                        <div class="hall__item hall__item_west swiper-slide">
+                            <a class="hall__link" href="hall-wild-west.html" target="_blank">
+                                <img class="hall__link-img" src="/img/hall-west.png" alt="">
+                                Wild west
+                            </a>
+                        </div>
+                        <div class="hall__item hall__item_neon swiper-slide">
+                            <a class="hall__link" href="hall-neon-style.html" target="_blank">
+                                <img class="hall__link-img" src="/img/hall-neon.png" alt="">
+                                Neon style
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -184,8 +230,8 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer__information-map">
-                    <img src="./img/map.jpg" alt="Карта данного района города" width="680" height="274">
+                <div class="footer__information-map" id="map" style="width: 680px; height: 274px">
+                    <!-- <img src="./img/map.jpg" alt="Карта данного района города" width="680" height="274"> -->
                 </div>
             </div>
             <div class="copyright">
