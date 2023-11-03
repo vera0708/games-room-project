@@ -122,7 +122,8 @@ address {
 
 .container {
     max-width: 1440px;
-    padding: 0 130px;
+    padding-left: 130px;
+    padding-right: 130px;
     margin: 0 auto;
 }
 

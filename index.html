@@ -20,7 +20,8 @@
         type="text/javascript">    </script>
     <script defer src="script/just-validate.production.min.js"></script>
     <script defer src="script/inputmask.min.js"></script>
-    <script defer src="script/script.js"></script>
+    <script defer src="script/axios.min.js"></script>
+    <script defer src="script/map.js"></script>
     <script src="script/modal.js" defer></script>
     <script src="script/burger.js" defer></script>
     <script src="script/accordion.js" defer></script>
@@ -150,7 +151,7 @@
         <section class="section booking" id="booking">
             <div class="container booking__container">
                 <h2 class="section__title booking__title">Забронировать зал просто</h2>
-                <form action="https://jsonplaceholder.typicode.com/posts" method="post">
+                <form class="booking__form" action="https://jsonplaceholder.typicode.com/posts" method="post">
                     <fieldset class="field">
                         <fieldset class="fieldset field-halls">
                             <legend class="fieldset__legend">Выбери зал</legend>
@@ -238,12 +239,12 @@
                                     <div class="person-info-data">
                                         <label class="person-info-event__label">
                                             <span class="visually-hidden person-info-event__text">Дата</span>
-                                            <input class="person-info__input person-info-event__input"
+                                            <input class="person-info__input person-info-event__input person-info__date"
                                                 placeholder="Дата" name="date" required>
                                         </label>
                                         <label class="person-info-event__label">
                                             <span class="visually-hidden person-info-event__text">Время</span>
-                                            <input class="person-info__input person-info-event__input"
+                                            <input class="person-info__input person-info-event__input person-info__time"
                                                 placeholder="Время" name="time" required>
                                         </label>
                                     </div>
@@ -258,21 +259,25 @@
                                 <div class="person-info person-info-person">
                                     <label class="person-info__label">
                                         <span class="person-info__text">Имя</span>
-                                        <input class="person-info__input" type="text" name="firstName" required>
+                                        <input class="person-info__input person-info__name" type="text" name="firstName"
+                                            required>
                                     </label>
                                     <label class="person-info__label">
                                         <span class="person-info__text">Фамилия</span>
-                                        <input class="person-info__input" type="text" name="lastName" required>
+                                        <input class="person-info__input person-info__surname" type="text"
+                                            name="lastName" required>
                                     </label>
                                 </div>
                                 <div class="person-info person-info-connect">
                                     <label class="person-info__label">
                                         <span class="person-info__text">Телефон</span>
-                                        <input class="person-info__input" type="tel" name="telephone" required>
+                                        <input class="person-info__input person-info__tel" type="tel" name="phone"
+                                            required>
                                     </label>
                                     <label class="person-info__label">
                                         <span class="person-info__text">E-mail</span>
-                                        <input class="person-info__input" type="email" name="email" required>
+                                        <input class="person-info__input person-info__email" type="email" name="email"
+                                            required>
                                     </label>
                                 </div>
                         </fieldset>
@@ -498,11 +503,11 @@
             <form class="modal__form form">
                 <label class="form__label">
                     <span class="form__span">Имя</span>
-                    <input class="form__input" name="name" type="text" required>
+                    <input class="form__input form__input-name" name="modalName" type="text" required>
                 </label>
                 <label class="form__label">
                     <span class="form__span">Телефон</span>
-                    <input class="form__input" name="name" type="text" required>
+                    <input class="form__input form__input-tel" name="modalPhone" type="tel" required>
                 </label>
                 <button class="form__button" type="submit">Позвонить мне</button>
             </form>

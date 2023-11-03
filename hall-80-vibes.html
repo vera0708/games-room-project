@@ -22,8 +22,9 @@
         type="text/javascript">    </script>
     <script defer src="script/just-validate.production.min.js"></script>
     <script defer src="script/inputmask.min.js"></script>
-    <script defer src="script/script.js"></script>
+    <script defer src="script/map.js"></script>
     <script defer src="script/swiper.js"></script>
+    <script src="script/modal.js" defer></script>
 
 </head>
 
@@ -243,7 +244,30 @@
             </div>
         </div>
     </footer>
-
+    <div class="modal-overlay">
+        <div class="modal">
+            <h2 class="modal__title">Заказать звонок</h2>
+            <form class="modal__form form">
+                <label class="form__label">
+                    <span class="form__span">Имя</span>
+                    <input class="form__input form__input-name" name="modalName" type="text" required>
+                </label>
+                <label class="form__label">
+                    <span class="form__span">Телефон</span>
+                    <input class="form__input form__input-tel" name="modalPhone" type="tel" required>
+                </label>
+                <button class="form__button" type="submit">Позвонить мне</button>
+            </form>
+            <button class="modal__close" type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+                    <rect y="38.4407" width="54.3632" height="5.03363" rx="2" transform="rotate(-45 0 38.4407)"
+                        fill="white" />
+                    <rect x="3.55957" width="54.3632" height="5.03363" rx="2" transform="rotate(45 3.55957 0)"
+                        fill="white" />
+                </svg>
+            </button>
+        </div>
+    </div>
 </body>
 
 </html>
