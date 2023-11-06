@@ -15,14 +15,19 @@
     <title>Проект игрового пространства</title>
     <link rel="stylesheet" href="style/normalize.css">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
 
     <script src="https://api-maps.yandex.ru/2.1/?apikey=d6a3a29c-aeb8-4681-ad38-32679d0ddc6b&lang=ru_RU"
         type="text/javascript">    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script defer src="script/just-validate.production.min.js"></script>
+    <script defer src="script/just-validate-plugin-date.production.min.js"></script>
     <script defer src="script/inputmask.min.js"></script>
     <script defer src="script/axios.min.js"></script>
     <script defer src="script/map.js"></script>
     <script src="script/modal.js" defer></script>
+    <script src="script/booking.js" defer></script>
     <script src="script/burger.js" defer></script>
     <script src="script/accordion.js" defer></script>
 </head>
@@ -178,7 +183,7 @@
                         <fieldset class="fieldset field-set">
                             <legend class="fieldset__legend">Собери набор развлечений</legend>
                             <div class="fieldset-set">
-                                <fieldset class="fieldset-set-console" name="fieldconsole">
+                                <fieldset class="fieldset-set-console" name="fieldconsole" id="concole">
                                     <legend class="fieldset-set__legend">Приставка:</legend>
                                     <label class="radio fieldset-set__radio">
                                         <input class="radio__input-circle" type="radio" name="console">
@@ -198,7 +203,7 @@
                                     </label>
                                 </fieldset>
 
-                                <fieldset class="fieldset-set-plays" name="fieldgame">
+                                <fieldset class="fieldset-set-plays" name="fieldgame" id="plays">
                                     <legend class="fieldset-set__legend">Настольные игры:</legend>
                                     <label class="checkbox fieldset-set__checkbox">
                                         <input class="checkbox__input" type="checkbox" name="game">
@@ -218,7 +223,7 @@
                                     </label>
                                 </fieldset>
 
-                                <fieldset class="fieldset-set-add" name="fieldadd">
+                                <fieldset class="fieldset-set-add" name="fieldadd" id="add">
                                     <legend class="fieldset-set__legend">Дополнительно:</legend>
                                     <label class="checkbox fieldset-set__checkbox">
                                         <input class="checkbox__input" type="checkbox" name="additional">
@@ -240,51 +245,53 @@
                                         <label class="person-info-event__label">
                                             <span class="visually-hidden person-info-event__text">Дата</span>
                                             <input class="person-info__input person-info-event__input person-info__date"
-                                                placeholder="Дата" name="date" required>
+                                                placeholder="Дата" name="date" type="text" onfocus="this.type='date'"
+                                                onblur="this.type='text'">
                                         </label>
                                         <label class="person-info-event__label">
                                             <span class="visually-hidden person-info-event__text">Время</span>
                                             <input class="person-info__input person-info-event__input person-info__time"
-                                                placeholder="Время" name="time" required>
+                                                placeholder="Время" name="time" type="text" onfocus="this.type='time'"
+                                                onblur="this.type='text'">
                                         </label>
                                     </div>
                                     <div class="person-info-number">
                                         <label class="person-info__label">
                                             <span class="visually-hidden person-info-event__text">Сколько человек</span>
-                                            <input class="person-info__input person-info-event__input"
-                                                placeholder="Сколько человек" type="number" name="peoples" required>
+                                            <input
+                                                class="person-info__input person-info-event__input person-info__people"
+                                                placeholder="Сколько человек" type="number" name="peoples">
                                         </label>
                                     </div>
                                 </div>
                                 <div class="person-info person-info-person">
                                     <label class="person-info__label">
                                         <span class="person-info__text">Имя</span>
-                                        <input class="person-info__input person-info__name" type="text" name="firstName"
-                                            required>
+                                        <input class="person-info__input person-info__name" type="text"
+                                            name="firstName">
                                     </label>
                                     <label class="person-info__label">
                                         <span class="person-info__text">Фамилия</span>
                                         <input class="person-info__input person-info__surname" type="text"
-                                            name="lastName" required>
+                                            name="lastName">
                                     </label>
                                 </div>
                                 <div class="person-info person-info-connect">
                                     <label class="person-info__label">
                                         <span class="person-info__text">Телефон</span>
-                                        <input class="person-info__input person-info__tel" type="tel" name="phone"
-                                            required>
+                                        <input class="person-info__input person-info__tel" type="tel" name="phone">
                                     </label>
                                     <label class="person-info__label">
                                         <span class="person-info__text">E-mail</span>
-                                        <input class="person-info__input person-info__email" type="email" name="email"
-                                            required>
+                                        <input class="person-info__input person-info__email" type="email" name="email">
                                     </label>
                                 </div>
                         </fieldset>
-                        <button class="booking__button" type="submit">Забронировать</button>
-                        <label class="visually-hidden">
-                            <input type="checkbox" name="agreement">Согласен на обработку данных
-                        </label>
+                        <div class="booking__wrap-submit">
+                            <div class="booking__error">Errors.
+                            </div>
+                            <button class="booking__button" type="submit">Забронировать</button>
+                        </div>
                     </fieldset>
                 </form>
             </div>

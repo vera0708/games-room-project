@@ -88,9 +88,7 @@
 
 .radio-halls {
     background-color: var(--main-color);
-    padding-top: 7px;
-    padding-bottom: 8px;
-    padding-right: 20px;
+    padding: 7px 4px 8px;
     border: 3px solid transparent;
     border-radius: 8px;
     cursor: pointer;
@@ -102,7 +100,6 @@
     align-items: center;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
 }
 
 .radio-halls:hover {
@@ -133,10 +130,11 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    width: 24px;
+    width: 26px;
     height: 27px;
     vertical-align: middle;
     position: relative;
+    margin-left: 6px;
 }
 
 .radio__input:after {
@@ -391,22 +389,29 @@
     color: #211E1E;
     background-color: var(--main-color);
     padding: 12px 20px;
-    border: 0;
+    border: 1px solid transparent;
+    outline: 0;
 }
 
 .person-info__input:focus {
     border: 2px solid var(--light-color);
+    background-image: none;
     -webkit-transition-duration: 2s;
     -o-transition-duration: 2s;
     transition-duration: 2s;
 }
 
-.person-info-event__text::after {
-    content: '';
-    position: absolute;
-    display: inline-block;
-    width: 21px;
-    height: 15px;
+.person-info__input.invalid {
+    border-color: #f00;
+}
+
+.person-info__input:focus-visible {
+    border-color: #640AA3;
+}
+
+.person-info__date,
+.person-info__time,
+.person-info__people {
     background-image: url('../img/icons/triangle.svg');
     background-repeat: no-repeat;
     background-size: 21px;
@@ -414,21 +419,31 @@
     vertical-align: middle;
 }
 
+.booking__wrap-submit {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: right;
+}
+
 .booking__button {
-    display: inline-block;
     background: var(--main-color);
     border-radius: 10px;
-    min-width: 300px;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding: 16px 50px;
     font-weight: 700;
     font-size: 22px;
     line-height: 28px;
     text-transform: uppercase;
     color: var(--add-color);
-    /* padding: 16px 50px; */
-    margin-left: auto;
+    /* margin-left: auto; */
     margin-right: 100px;
+}
+
+.booking__error {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: right;
 }
 
 .booking__button:hover {
