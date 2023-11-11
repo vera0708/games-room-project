@@ -331,7 +331,6 @@
     .hall__list {
         display: flex;
         flex-direction: column;
-
         min-height: 540px;
     }
 

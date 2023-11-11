@@ -1,11 +1,12 @@
 const swiper = new Swiper('.swiper', {
+    direction: 'vertical',
     slidesPerView: 3,
     loop: true,
     mousewheel: true,
     keyboard: true,
-    // breakpoints: {
-    //     580: {
-    //         direction: 'vertical'
-    //     }
-    // }
+    breakpoints: {
+        630: {
+            direction: 'horizontal',
+        }
+    }
 });
