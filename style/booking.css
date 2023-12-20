@@ -409,14 +409,60 @@
     border-color: #640AA3;
 }
 
+/*
+.person-info__date {
+    position: relative;
+}
+
+.person-info__date::after {
+    content: url('../img/icons/triangle.svg');
+    position: absolute;
+    right: 10px;
+}
+
+.person-info__date::before {
+    content: 'Дата';
+    background-color: #fff;
+    width: 80%;
+    position: absolute;
+}
+
+.person-info__date:focus::before {
+    content: '';
+}*/
+
+.field-set-date {
+    position: relative;
+}
+
 .person-info__date,
 .person-info__time,
 .person-info__people {
     background-image: url('../img/icons/triangle.svg');
     background-repeat: no-repeat;
     background-size: 21px;
-    background-position: right;
+    background-position-x: right;
     vertical-align: middle;
+}
+
+.person-info-event__label1 {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    background-color: #fff;
+    width: 80%;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: auto;
+    color: transparent;
+    background: transparent;
 }
 
 .booking__wrap-submit {

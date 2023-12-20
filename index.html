@@ -242,14 +242,16 @@
                             <div class="fieldset-person">
                                 <div class="person-info-event">
                                     <div class="person-info-data">
-                                        <label class="person-info-event__label">
-                                            <span class="visually-hidden person-info-event__text">Дата</span>
-                                            <input class="person-info__input person-info-event__input person-info__date"
+                                        <!-- <input class="person-info__input person-info-event__input person-info__date"
                                                 placeholder="Дата" name="date" type="text" onfocus="this.type='date'"
-                                                onblur="this.type='text'">
-                                        </label>
+                                                onblur="this.type='text'"> -->
+                                        <fieldset class="field-set-date">
+                                            <label for="input-date" class="person-info-event__label1">Дата</label>
+                                            <input id="input-date"
+                                                class="person-info__input person-info-event__input person-info__date"
+                                                type="date">
+                                        </fieldset>
                                         <label class="person-info-event__label">
-                                            <span class="visually-hidden person-info-event__text">Время</span>
                                             <input class="person-info__input person-info-event__input person-info__time"
                                                 placeholder="Время" name="time" type="text" onfocus="this.type='time'"
                                                 onblur="this.type='text'">
